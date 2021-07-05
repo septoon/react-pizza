@@ -1,0 +1,44 @@
+.teaCard_wrapper {
+  padding-top: 30px;
+}
+
+.card_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_items{
+  width: 40%;
+  display: flex;
+}
+
+.card_items:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card_items:first-child .card_item {
+  display: none;
+
+}
+
+.card_item {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border-bottom: 1px solid gray;
+  transition: .3s;
+}
+
+.teaCard_title {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .card_items {
+    width: 100%;
+  }
+}

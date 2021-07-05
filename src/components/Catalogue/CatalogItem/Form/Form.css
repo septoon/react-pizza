@@ -1,0 +1,19 @@
+.form-wrapper {
+  width: 50%;
+  height: 50vh;
+  padding: 15px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  width: 15px;
+  height: 15px;
+  align-self: flex-end;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}

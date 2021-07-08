@@ -61,7 +61,7 @@
 
 .size_item {
   width: 34%;
-  font-size: 13px;
+  font-size: 1em;
   font-weight: bold;
   border: .5px solid #ddd;
   border-radius: 5px;
@@ -100,7 +100,7 @@
   padding: 11px 18px;
   background-color: #FE5F1E;
   color: #fff;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   border-radius: 30px;
 }
@@ -137,7 +137,7 @@ button:focus {
 
 @media screen and (max-width: 1280px) {
   .wrapper {
-    width: 90%;
+    width: 100%;
   }
 
   .catalog_item {
@@ -148,6 +148,15 @@ button:focus {
 @media screen and (max-width: 860px) {
   .wrapper {
     width: 98%;
+  }
+
+  .size_item {
+    font-size: .5em;
+  }
+
+  .btn_order {
+    font-size: .5em;
+    padding: 7px 14px;
   }
 }
 

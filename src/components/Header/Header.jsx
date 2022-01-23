@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom'
 const Header = (props) => {
     return (    
         <div className='header_wrapper'>
-            <NavLink to='/main' >
+            <NavLink to='/react-pizza' >
                 <img src={logo} alt="logo" className='logo' />
             </NavLink>
             <NavBar />
@@ -19,7 +19,7 @@ const Header = (props) => {
                    <div className="total_count">
                         <span>{props.totalPrice} ₽</span>
                    </div>
-                   <div className="baket_icon">
+                   <div className="basket_icon">
                     <img src={basket} alt='shopping cart' />
                    </div>
                </div>

@@ -8,14 +8,16 @@ import CatalogueContainer from './components/Catalogue/CatalogueContainer';
 import TeaCardContainer from './components/TeaCard/TeaCardContainer';
 import AboutUs from './components/AboutUs/AboutUs';
 import DeliveryContainer from './components/Delivery/DeliveryContainer';
+import Main from './components/Main/Main';
 // import Basket from './components/Basket/Basket';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <NavBar />
-      <div className='app-wrapper-content'>
+      {/* <NavBar /> */}
+      <div className='app-wrapper-content'>      
+        <Route path='/main' component={ Main } />
         <Route path='/catalog' component={ CatalogueContainer } />
         <Route path='/teaCard' component={ TeaCardContainer } />
         <Route path='/aboutUs' component={ AboutUs } />

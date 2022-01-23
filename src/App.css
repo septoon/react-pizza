@@ -4,6 +4,7 @@
   font-family: sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Rubik+Mono+One&family=Russo+One&display=swap');
 body {
   background-color: #FFDF8C;
   padding: 43px 0;
@@ -16,7 +17,4 @@ body {
   max-width: 1340px;
   padding: 0 60px;
   margin: auto;
-}
-
-.container {
 }

@@ -1,3 +1,3 @@
 # Getting Started with Create React App Github Pages
 
-septoon.github.io/react-pizza
+https://septoon.github.io/react-pizza/

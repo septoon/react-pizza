@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import logo from '../../common/img/pizza-logo.svg'
+import logo from '../../common/img/pizza-logo.png'
 import basket from '../../common/img/shopping-cart.svg'
 import { connect } from 'react-redux'
 import NavBar from '../NavBar/NavBar'

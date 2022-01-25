@@ -8,9 +8,9 @@ import TeaCardContainer from './components/TeaCard/TeaCardContainer';
 import AboutUs from './components/AboutUs/AboutUs';
 import DeliveryContainer from './components/Delivery/DeliveryContainer';
 import Main from './components/Main/Main';
-// import Basket from './components/Basket/Basket';
+import Cart from './components/Cart/Cart';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
@@ -21,7 +21,7 @@ function App() {
         <Route path='/teaCard' component={ TeaCardContainer } />
         <Route path='/aboutUs' component={ AboutUs } />
         <Route path='/delivery' component={ DeliveryContainer } />
-        {/* <Route path='/basket' component={ Basket } /> */}
+        <Route path='/cart' component={ Cart } />
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ import basket from '../../common/img/shopping-cart.svg'
 import { connect } from 'react-redux'
 import NavBar from '../NavBar/NavBar'
 import { NavLink } from 'react-router-dom'
-// import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
     return (    
@@ -20,7 +19,9 @@ const Header = (props) => {
                         <span>{props.totalPrice} ₽</span>
                    </div>
                    <div className="basket_icon">
+                   <NavLink to='/cart' >
                     <img src={basket} alt='shopping cart' />
+                    </NavLink>
                    </div>
                </div>
             </div>

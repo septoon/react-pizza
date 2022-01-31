@@ -5,11 +5,14 @@ import classes from './CatalogItem.module.css'
 const CatalogItem = ({ catalogPage, addPriceCount }) => {
   const priceHolder = React.createRef()
 
+  let countIndex = 0
   const [currentPrice, setCurrentPrice] = useState('');
   // const [order, setOrder] = useState({});
   return (
     <div className={classes.wrapper} >
       {catalogPage.catalogData.map((c, index) => {
+        let pizzaPrice = !c.isChange ? c.price.small : currentPrice
+
         return <div key={c.id} className={classes.catalog_item} >
         <img src={c.image} alt={c.title} className={classes.image} />
         <span className={classes.name} >{c.title}</span>
@@ -35,16 +38,16 @@ const CatalogItem = ({ catalogPage, addPriceCount }) => {
         <div className={classes.price_holder}>
           <span className={`${classes.price} ${classes.pr_inp}`}>
             <span className={classes.price_count}> 
-            <b ref={priceHolder} >{!c.isChange ? c.price.small : currentPrice}</b> 
+            <b ref={priceHolder} >{pizzaPrice}</b> 
             руб. </span>
           </span>
           <button className={classes.btn_order} 
             onClick={() => {
-              const price = !c.isChange ? c.price.small : currentPrice
-              addPriceCount(price)
-              
+              countIndex++
+              let totalPrice = currentPrice * countIndex
+              addPriceCount(totalPrice)
             }}
-            >+ Добавить</button>
+            >+ Добавить </button>
         </div>
 
       </div>

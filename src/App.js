@@ -8,7 +8,8 @@ import TeaCardContainer from './components/TeaCard/TeaCardContainer';
 import AboutUs from './components/AboutUs/AboutUs';
 import DeliveryContainer from './components/Delivery/DeliveryContainer';
 import Main from './components/Main/Main';
-import Cart from './components/Cart/Cart';
+import CartContainer from './components/Cart/Cart.Container';
+import ContactUs from './components/emailjs/EmailForm';
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
         <Route path='/teaCard' component={ TeaCardContainer } />
         <Route path='/aboutUs' component={ AboutUs } />
         <Route path='/delivery' component={ DeliveryContainer } />
-        <Route path='/cart' component={ Cart } />
+        <Route path='/cart' component={ CartContainer } />
+        <Route path='/order' component={ ContactUs } />
       </div>
     </div>
   );

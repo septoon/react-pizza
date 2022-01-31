@@ -13,6 +13,6 @@ let reducers = combineReducers({
     deliveryPage: deliveryReducer
 })
 
-export const store = createStore(reducers) // applyMiddleware for thunk
+export const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) // applyMiddleware for thunk
 
 window.store = store

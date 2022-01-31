@@ -135,6 +135,13 @@ button:focus {
   outline: none;
 }
 
+.order_index {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #FE5F1E;
+  color: #fff;
+}
+
 @media screen and (max-width: 1280px) {
   .wrapper {
     width: 100%;

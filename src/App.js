@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Header from './components/Header/Header';
 // import NavBar from './components/NavBar/NavBar';
-import CatalogueContainer from './components/Catalogue/CatalogueContainer';
+import Catalogue from './components/Catalogue/Catalogue';
 import TeaCardContainer from './components/TeaCard/TeaCardContainer';
 import AboutUs from './components/AboutUs/AboutUs';
 import DeliveryContainer from './components/Delivery/DeliveryContainer';
@@ -18,7 +18,7 @@ const App = () => {
       {/* <NavBar /> */}
       <div className='app-wrapper-content'>   
         <Route exact path='/react-pizza' component={ Main } />
-        <Route path='/catalog' component={ CatalogueContainer } />
+        <Route path='/catalog' component={ Catalogue } />
         <Route path='/teaCard' component={ TeaCardContainer } />
         <Route path='/aboutUs' component={ AboutUs } />
         <Route path='/delivery' component={ DeliveryContainer } />

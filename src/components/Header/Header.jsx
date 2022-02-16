@@ -14,7 +14,7 @@ const Header = () => {
         totalCount: cart.totalCount
     }))
 
-    console.log(totalPrice)
+    console.log(totalCount)
   
     // const items = useSelector(({ cart }) => ({
     //     items: cart.items

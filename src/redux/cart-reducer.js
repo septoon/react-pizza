@@ -1,6 +1,5 @@
 const ADD_PIZZA_CART = 'cart/ADD_PIZZA_CART'
 const SET_TOTAL_COUNT = 'cart/SET_TOTAL_COUNT'
-const SET_TOTAL_PRICE = 'cart/SET_TOTAL_PRICE'
 
 const initialState = {
   items: [],
@@ -16,11 +15,13 @@ const cartReducer = (state = initialState, action) => {
         items: [...state.items, action.payload],
       }
 
-      let newTotal = 0;
+      let newTotalPrice = 0
 
-      newState.items.forEach(item => newTotal += parseInt(item.activePrice) )
+      newState.items.forEach(item => newTotalPrice += parseInt(item.activePrice) )
+      
+      newState.totalCount = newState.items.length
 
-      newState.totalPrice = newTotal
+      newState.totalPrice = newTotalPrice
 
       return newState
     }
@@ -38,25 +39,3 @@ export const addPizzaToCartAC = (pizzaObj) => ({ type: ADD_PIZZA_CART, payload: 
 export const setTotalCountAC = (count) => ({ type: SET_TOTAL_COUNT, payload: count })
 
 export default cartReducer
-
-
-// const cartReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case ADD_PIZZA_CART: {
-//       const newItems = {
-//         ...state.items, 
-//         [action.payload.id]: !state.items[action.payload.id] 
-//             ? [action.payload ] : [ ...state.items[action.payload.id], action.payload ]
-//         } 
-//       return {
-//         ...state,  
-//         items: newItems,
-//         totalCount: Object.keys(state.items).length
-//       }
-//     }
-//     case SET_TOTAL_COUNT:
-//       return {...state,  totalCount: action.payload }
-//     default:
-//       return state
-//   }
-// }

@@ -9,7 +9,6 @@ import Delivery from './components/Delivery/Delivery';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
 import ContactUs from './components/emailjs/EmailForm';
-// import CatalogueContainer from './components/Catalogue/CatalogueContainer';
 
 const App = () => {
   return (
@@ -28,4 +27,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default App

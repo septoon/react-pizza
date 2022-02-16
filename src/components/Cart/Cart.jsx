@@ -84,13 +84,10 @@ const Cart = () => {
                   <h2>Корзина пустая</h2>
                   <p>Вероятней всего, вы не заказывали ещё пиццу.
                      Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
-                     <img src={emptyCart} alt="empty-cart-logo" />
+                     <img src={emptyCart} alt="empty-cart-logo" className="empty-cart-logo" />
                      <NavLink to='/catalog'>
-                        <a href="/" className="button button--outline button--add go-back-btn">
-                          <img src={back} className="svg back" alt="back" />
-                            <span>Вернуться назад</span>
-                        </a>
-                      </NavLink>
+                        <button>Вернуться назад</button>
+                     </NavLink>
                 </div>
               )
             }

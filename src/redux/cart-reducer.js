@@ -1,5 +1,4 @@
 const ADD_PIZZA_CART = 'cart/ADD_PIZZA_CART'
-const SET_TOTAL_COUNT = 'cart/SET_TOTAL_COUNT'
 
 const initialState = {
   items: [],
@@ -25,17 +24,11 @@ const cartReducer = (state = initialState, action) => {
 
       return newState
     }
-    case SET_TOTAL_COUNT: {
-      return {
-        ...state, totalCount: action.payload
-      }
-    }
     default:
       return state
   }
 }
 
 export const addPizzaToCartAC = (pizzaObj) => ({ type: ADD_PIZZA_CART, payload: pizzaObj  })
-export const setTotalCountAC = (count) => ({ type: SET_TOTAL_COUNT, payload: count })
 
 export default cartReducer

@@ -14,24 +14,7 @@ const Header = () => {
         totalCount: cart.totalCount
     }))
 
-    console.log(totalCount)
-  
-    // const items = useSelector(({ cart }) => ({
-    //     items: cart.items
-    // }))
-
-    // const totalCount = useSelector(({ cart }) => ({
-    //     totalCount: cart.totalCount
-    // }))
-
-    
-    // const item = items.items
-
-    
-    
-    // const totalPrice = item.reduce((a, b) => a + parseInt(b.activePrice), 0)
-
-    return (    
+     return (    
         <div className='header_wrapper'>
             <NavLink to='/react-pizza' >
                 <img src={logo} alt="logo" className='logo' />

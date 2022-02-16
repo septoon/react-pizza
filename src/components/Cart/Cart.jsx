@@ -1,6 +1,6 @@
 import React from 'react'
 import './Cart.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 import basket from '../../common/img/shopping-cart-black.svg';
@@ -10,13 +10,17 @@ import plus from '../../common/img/plus.svg';
 import closeCart from '../../common/img/close-cart.svg';
 import back from '../../common/img/back.svg';
 import emptyCart from '../../common/img/empty-cart.svg';
+import { removePizzaAC } from '../../redux/cart-reducer';
 
 const Cart = () => {
+  const dispatch = useDispatch()
   const { items, totalCount, totalPrice } = useSelector(({ cart }) => ({
     items: cart.items,
     totalPrice: cart.totalPrice,
     totalCount: cart.totalCount
   }))
+
+  const [itemCount, setItemCount] = React.useState(1)
 
   return  (
     <div className="wrapper">
@@ -46,15 +50,21 @@ const Cart = () => {
                             <p>{i.activeSize}</p>
                           </div>
                           <div className="cart__item-count">
-                            <div className="button button--outline button--circle cart__item-count-minus"> <img src={minus} className="svg minus" alt="minus" /> </div>
-                            <b>1</b>
-                            <div className="button button--outline button--circle cart__item-count-plus"> <img src={plus} className="svg" alt="plus" /> </div>
+                            <div className="button button--outline button--circle cart__item-count-minus" onClick={ () => setItemCount(itemCount-1)}> 
+                              <img src={minus} className="svg minus" alt="minus" /> 
+                            </div>
+                            <b>{itemCount}</b>
+                            <div className="button button--outline button--circle cart__item-count-plus" onClick={ () => setItemCount(itemCount+1)}> 
+                              <img src={plus} className="svg" alt="plus" /> 
+                            </div>
                           </div>
                           <div className="cart__item-price">
-                            <b>{i.activePrice}</b>
+                            <b>{i.activePrice * itemCount}</b>
                           </div>
                           <div className="cart__item-remove">
-                            <div className="button button--outline button--circle"> <img src={closeCart} className="close-cart svg" alt="closeCart" /> </div>
+                            <div className="button button--outline button--circle" onClick={ () =>   dispatch(removePizzaAC(i.id)) }> 
+                              <img src={closeCart} className="close-cart svg" alt="closeCart" /> 
+                            </div>
                           </div>
                         </div>
                       ))}

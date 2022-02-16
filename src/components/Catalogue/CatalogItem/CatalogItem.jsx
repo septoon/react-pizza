@@ -6,16 +6,12 @@ const CatalogItem = ({ id, image, title, composition, prices, isChange, onClickA
 
   const [activeSize, setActiveSize] = React.useState('30 см')
   const [activePrice, setActivePrice] = React.useState(prices[0])
-  
-  let count = 0
 
   const onAddPizza = () => {
     const obj = {
       id, title, image, activePrice, activeSize
     }
-    count++
-    onClickAddPizza(obj, count)
-    // console.log('Редакс ', items)
+    onClickAddPizza(obj)
   }
   return (
      <div className="catalog_item" >

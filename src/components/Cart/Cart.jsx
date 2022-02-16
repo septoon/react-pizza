@@ -9,6 +9,7 @@ import minus from '../../common/img/minus.svg';
 import plus from '../../common/img/plus.svg';
 import closeCart from '../../common/img/close-cart.svg';
 import back from '../../common/img/back.svg';
+import emptyCart from '../../common/img/empty-cart.svg';
 
 const Cart = () => {
   const { items, totalCount, totalPrice } = useSelector(({ cart }) => ({
@@ -79,7 +80,18 @@ const Cart = () => {
                     </>
               ) :
               ( // Если корзина пустая
-                <div>empty</div>
+                <div className="empty_cart">
+                  <h2>Корзина пустая</h2>
+                  <p>Вероятней всего, вы не заказывали ещё пиццу.
+                     Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
+                     <img src={emptyCart} alt="empty-cart-logo" />
+                     <NavLink to='/catalog'>
+                        <a href="/" className="button button--outline button--add go-back-btn">
+                          <img src={back} className="svg back" alt="back" />
+                            <span>Вернуться назад</span>
+                        </a>
+                      </NavLink>
+                </div>
               )
             }
 

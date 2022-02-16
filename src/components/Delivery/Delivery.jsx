@@ -13,8 +13,8 @@ const DeliveryPage = (props) => {
 
   React.useEffect(() => { 
     dispatch(addDeliveryList(deliveryList))
-  }, [])
-
+  }, [dispatch])
+  
   return (
     <div className='delivery-main'>
       <div className='delivery-list'>

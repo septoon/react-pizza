@@ -25,8 +25,12 @@
   justify-content: space-around;
 }
 
-.total_count span {
+.basket span {
   color: #fff;
+}
+
+.basket_icon span {
+  margin-left: 5px;
 }
 
 .bask {

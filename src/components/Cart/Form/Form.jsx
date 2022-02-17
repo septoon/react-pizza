@@ -3,7 +3,7 @@ import './Form.css'
 import emailjs from 'emailjs-com';
 import close from '../../../common/img/close.png'
 
-const Form = ({ setIsOrder, items, totalCount, totalPrice }) => {
+const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -32,7 +32,12 @@ const Form = ({ setIsOrder, items, totalCount, totalPrice }) => {
           <input name="address" placeholder="ул. Горького, 54" />
           <label>Введите ваш номер телефона:</label>
           <input name="telephone" type="tel" pattern="[0-9]{3}-[0-9]{3}" />
-          <button type="submit">Заказать</button>
+          <button type="submit" onClick={ () => {
+            setTimeout( () => {
+              onClickClearCart()
+              setIsOrder(false)
+            }, 500)
+          } }>Заказать</button>
         </form>
       </div>
     </div>

@@ -25,11 +25,18 @@ const Cart = () => {
   const onClickRemovePizza = (pizzaId) => {
     dispatch(removePizzaAC(pizzaId))
   }
+  const onClickClearCart = () => {
+    dispatch(clearPizzaCartAC())
+  }
 
   return  (
     <div className="wrapper">
       <div className="content">
-        { isOrder && (<Form setIsOrder={setIsOrder} items={items} totalCount={totalCount} totalPrice={totalPrice} />) }
+        { isOrder && (<Form setIsOrder={setIsOrder} 
+                            onClickClearCart={onClickClearCart}
+                            items={items} 
+                            totalCount={totalCount} 
+                            totalPrice={totalPrice} />) }
         <div className="container container--cart">
           <div className="cart">
             {
@@ -64,10 +71,7 @@ const Cart = () => {
                         <span>Вернуться назад</span>
                       </NavLink>
                       <div className="button pay-btn">
-                        <button className="btn-order" onClick={ () => {
-                          dispatch(clearPizzaCartAC()
-                          setIsOrder(true)
-                        } } >Оплатить сейчас</button>
+                        <button className="btn-order" onClick={ () => setIsOrder(true) } >Оплатить сейчас</button>
                       </div>
                     </div>
                   </div>

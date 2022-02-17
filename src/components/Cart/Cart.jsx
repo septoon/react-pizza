@@ -5,89 +5,70 @@ import { NavLink } from 'react-router-dom'
 
 import basket from '../../common/img/shopping-cart-black.svg';
 import trash from '../../common/img/trash.svg';
-import minus from '../../common/img/minus.svg';
-import plus from '../../common/img/plus.svg';
-import closeCart from '../../common/img/close-cart.svg';
 import back from '../../common/img/back.svg';
 import emptyCart from '../../common/img/empty-cart.svg';
-import { removePizzaAC } from '../../redux/cart-reducer';
+import { clearPizzaCartAC, removePizzaAC } from '../../redux/cart-reducer';
+import CartItem from './CartItem';
+import Form from './Form/Form';
 
 const Cart = () => {
   const dispatch = useDispatch()
+
   const { items, totalCount, totalPrice } = useSelector(({ cart }) => ({
     items: cart.items,
     totalPrice: cart.totalPrice,
     totalCount: cart.totalCount
   }))
 
-  const [itemCount, setItemCount] = React.useState(1)
+  const [isOrder, setIsOrder] = React.useState(false)
+
+  const onClickRemovePizza = (pizzaId) => {
+    dispatch(removePizzaAC(pizzaId))
+  }
 
   return  (
     <div className="wrapper">
       <div className="content">
+        { isOrder && (<Form setIsOrder={setIsOrder} items={items} totalCount={totalCount} totalPrice={totalPrice} />) }
         <div className="container container--cart">
           <div className="cart">
             {
               items.length ?
               ( // Если в корзине что-то есть
                 <>
-                <div className="cart__top">
+                  <div className="cart__top">
                     <h2 className="content__title"> <img src={basket} className="bask svg" alt="basket" /> Корзина</h2>
-                    <div className="cart__clear">
+                    <div className="cart__clear" onClick={() => {
+                      let popup = window.confirm("Вы уверены, что хотите очистить корзину?") 
+                      if (popup === true) dispatch(clearPizzaCartAC())
+                    } }>
                       <img src={trash} alt="trash" />
                       <span>Очистить корзину</span>
                     </div>
-                  </div><div className="content__items">
-                      {items.map(i => (
-                        <div className="cart__item" key={i.id}>
-                          <div className="cart__item-img">
-                            <img className="pizza-block__image"
-                              src={i.image}
-                              alt={i.title} />
-                          </div>
-                          <div className="cart__item-info">
-                            <h3>{i.title}</h3>
-                            <p>{i.activeSize}</p>
-                          </div>
-                          <div className="cart__item-count">
-                            <div className="button button--outline button--circle cart__item-count-minus" onClick={ () => setItemCount(itemCount-1)}> 
-                              <img src={minus} className="svg minus" alt="minus" /> 
-                            </div>
-                            <b>{itemCount}</b>
-                            <div className="button button--outline button--circle cart__item-count-plus" onClick={ () => setItemCount(itemCount+1)}> 
-                              <img src={plus} className="svg" alt="plus" /> 
-                            </div>
-                          </div>
-                          <div className="cart__item-price">
-                            <b>{i.activePrice * itemCount}</b>
-                          </div>
-                          <div className="cart__item-remove">
-                            <div className="button button--outline button--circle" onClick={ () =>   dispatch(removePizzaAC(i.id)) }> 
-                              <img src={closeCart} className="close-cart svg" alt="closeCart" /> 
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div><div className="cart__bottom">
-                      <div className="cart__bottom-details">
-                        <span> Всего пицц: <b>{totalCount} шт.</b> </span>
-                        <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
-                      </div>
-                      <div className="cart__bottom-buttons">
-                        <NavLink to='/catalog'>
-                          <a href="/" className="button button--outline button--add go-back-btn">
-                            <img src={back} className="svg back" alt="back" />
-                              <span>Вернуться назад</span>
-                          </a>
-                        </NavLink>
-                        <div className="button pay-btn">
-                          <NavLink to='/order'>
-                            <span>Оплатить сейчас</span>
-                          </NavLink>
-                        </div>
+                  </div>
+                  <div className="content__items">
+
+                  {items.map(item => (
+                    <CartItem  key={item.id} onClickRemovePizza={onClickRemovePizza} {...item} />
+                  ))}
+
+                  </div>
+                  <div className="cart__bottom">
+                    <div className="cart__bottom-details">
+                      <span> Всего пицц: <b>{totalCount} шт.</b> </span>
+                      <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
+                    </div>
+                    <div className="cart__bottom-buttons">
+                      <NavLink to='/catalog'>
+                        <img src={back} className="svg back" alt="back" />
+                        <span>Вернуться назад</span>
+                      </NavLink>
+                      <div className="button pay-btn">
+                        <button className="btn-order" onClick={ () => setIsOrder(true) } >Оплатить сейчас</button>
                       </div>
                     </div>
-                    </>
+                  </div>
+                </>
               ) :
               ( // Если корзина пустая
                 <div className="empty_cart">
@@ -101,7 +82,6 @@ const Cart = () => {
                 </div>
               )
             }
-
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@
 
  .content {
 	 padding: 40px 0;
+	 position: relative;
 }
  .content__title {
 	 margin: 35px 0;
@@ -259,4 +260,8 @@
 
 .empty-cart-logo {
 	max-width: 300px;
+}
+
+.btn-order {
+	cursor: pointer;
 }

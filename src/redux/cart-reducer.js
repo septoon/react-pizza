@@ -1,4 +1,5 @@
 const ADD_PIZZA_CART = 'cart/ADD_PIZZA_CART'
+const CLEAR_PIZZA_CART = 'cart/CLEAR_PIZZA_CART'
 const REMOVE_PIZZA = 'cart/REMOVE_PIZZA'
 
 const initialState = {
@@ -25,15 +26,22 @@ const cartReducer = (state = initialState, action) => {
 
       return newState
     }
+    case CLEAR_PIZZA_CART: {
+      let newState = { 
+        ...state, items: state.items = []
+      }
+      newState.totalCount = 0
+
+      newState.totalPrice = 0
+      return newState
+    }
     case REMOVE_PIZZA: {
       debugger
-      return {
-        ...state,
-        items: [
-          ...state.items.slice(0, action.payload),
-          ...state.items.slice(action.payload + 1)
-        ],
+      let newState =  {
+        ...state, 
+        items: [...state.items, action.payload],
       }
+      return newState.items.slice(0, action.payload)
     }
     default:
       return state
@@ -41,6 +49,7 @@ const cartReducer = (state = initialState, action) => {
 }
 
 export const addPizzaToCartAC = (pizzaObj) => ({ type: ADD_PIZZA_CART, payload: pizzaObj  })
+export const clearPizzaCartAC = () => ({ type: CLEAR_PIZZA_CART })
 export const removePizzaAC = (id) => ({ type: REMOVE_PIZZA, payload: id  })
 
 export default cartReducer

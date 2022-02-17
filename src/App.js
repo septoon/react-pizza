@@ -8,7 +8,6 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Delivery from './components/Delivery/Delivery';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
-import ContactUs from './components/emailjs/EmailForm';
 
 const App = () => {
   return (
@@ -21,7 +20,6 @@ const App = () => {
         <Route path='/aboutUs' component={ AboutUs } />
         <Route path='/delivery' component={ Delivery } />
         <Route path='/cart' component={ Cart } />
-        <Route path='/order' component={ ContactUs } /> 
       </div>
     </div>
   );

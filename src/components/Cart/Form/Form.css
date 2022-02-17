@@ -36,6 +36,10 @@
   margin-top: 5px;
 }
 
+.hidden-input:focus {
+  outline: none;
+}
+
 .form-total {
   margin-top: 20px;
   width: 100%;

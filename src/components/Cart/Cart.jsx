@@ -64,7 +64,10 @@ const Cart = () => {
                         <span>Вернуться назад</span>
                       </NavLink>
                       <div className="button pay-btn">
-                        <button className="btn-order" onClick={ () => setIsOrder(true) } >Оплатить сейчас</button>
+                        <button className="btn-order" onClick={ () => {
+                          dispatch(clearPizzaCartAC()
+                          setIsOrder(true)
+                        } } >Оплатить сейчас</button>
                       </div>
                     </div>
                   </div>

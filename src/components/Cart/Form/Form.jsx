@@ -2,20 +2,28 @@ import React, { useRef } from 'react'
 import './Form.css'
 import emailjs from 'emailjs-com';
 import close from '../../../common/img/close.png'
+import mask from '../../../common/other/mask';
+// import ReactInputMask from 'react-input-mask';
 
 const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
-  const form = useRef();
+  const form = useRef()
+  const input = useRef()
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
   emailjs.sendForm('gmail', 'template_34nbq1a', form.current, 'user_bZNkaUPeU8r748slZmiEH')
     .then((result) => {
         console.log(result.text);
     }, (error) => {
         console.log(error.text);
-    });
-  };
+    })
+  }
+
+  React.useEffect(() => {
+    mask(input)
+  }, [])
+
   return (
     <div className="email-form">
       <div className="email-form-wrapper">
@@ -31,7 +39,7 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
           <label>Введите ваш адрес:</label>
           <input name="address" placeholder="ул. Горького, 54" />
           <label>Введите ваш номер телефона:</label>
-          <input name="telephone" type="tel" pattern="[0-9]{3}-[0-9]{3}" />
+          <input  ref={input} placeholder="+7 (978) 704 88 06" name="telephone" type="tel" />
           <button type="submit" onClick={ () => {
             setTimeout( () => {
               onClickClearCart()

@@ -18,7 +18,7 @@ const cartReducer = (state = initialState, action) => {
 
       let newTotalPrice = 0
 
-      newState.items.forEach(item => newTotalPrice += parseInt(item.activePrice) )
+      newState.items.forEach(item => newTotalPrice += parseInt(item.activePrice) + 40 )
       
       newState.totalCount = newState.items.length
 

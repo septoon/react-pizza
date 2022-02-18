@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-pizza/static/css/main.b443696e.chunk.css",
-    "main.js": "/react-pizza/static/js/main.e499b04a.chunk.js",
-    "main.js.map": "/react-pizza/static/js/main.e499b04a.chunk.js.map",
+    "main.css": "/react-pizza/static/css/main.ad073031.chunk.css",
+    "main.js": "/react-pizza/static/js/main.50086332.chunk.js",
+    "main.js.map": "/react-pizza/static/js/main.50086332.chunk.js.map",
     "runtime-main.js": "/react-pizza/static/js/runtime-main.81530fb3.js",
     "runtime-main.js.map": "/react-pizza/static/js/runtime-main.81530fb3.js.map",
     "static/js/2.21211ebe.chunk.js": "/react-pizza/static/js/2.21211ebe.chunk.js",
     "static/js/2.21211ebe.chunk.js.map": "/react-pizza/static/js/2.21211ebe.chunk.js.map",
     "index.html": "/react-pizza/index.html",
-    "static/css/main.b443696e.chunk.css.map": "/react-pizza/static/css/main.b443696e.chunk.css.map",
+    "static/css/main.ad073031.chunk.css.map": "/react-pizza/static/css/main.ad073031.chunk.css.map",
     "static/js/2.21211ebe.chunk.js.LICENSE.txt": "/react-pizza/static/js/2.21211ebe.chunk.js.LICENSE.txt",
     "static/media/back.3077c672.svg": "/react-pizza/static/media/back.3077c672.svg",
     "static/media/close-cart.d2ce8a9a.svg": "/react-pizza/static/media/close-cart.d2ce8a9a.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.81530fb3.js",
     "static/js/2.21211ebe.chunk.js",
-    "static/css/main.b443696e.chunk.css",
-    "static/js/main.e499b04a.chunk.js"
+    "static/css/main.ad073031.chunk.css",
+    "static/js/main.50086332.chunk.js"
   ]
 }

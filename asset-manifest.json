@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-pizza/static/css/main.69cd1f58.chunk.css",
-    "main.js": "/react-pizza/static/js/main.e4f9aba5.chunk.js",
-    "main.js.map": "/react-pizza/static/js/main.e4f9aba5.chunk.js.map",
+    "main.css": "/react-pizza/static/css/main.5b60a995.chunk.css",
+    "main.js": "/react-pizza/static/js/main.75a4a7dc.chunk.js",
+    "main.js.map": "/react-pizza/static/js/main.75a4a7dc.chunk.js.map",
     "runtime-main.js": "/react-pizza/static/js/runtime-main.81530fb3.js",
     "runtime-main.js.map": "/react-pizza/static/js/runtime-main.81530fb3.js.map",
     "static/js/2.d4b09724.chunk.js": "/react-pizza/static/js/2.d4b09724.chunk.js",
     "static/js/2.d4b09724.chunk.js.map": "/react-pizza/static/js/2.d4b09724.chunk.js.map",
     "index.html": "/react-pizza/index.html",
-    "static/css/main.69cd1f58.chunk.css.map": "/react-pizza/static/css/main.69cd1f58.chunk.css.map",
+    "static/css/main.5b60a995.chunk.css.map": "/react-pizza/static/css/main.5b60a995.chunk.css.map",
     "static/js/2.d4b09724.chunk.js.LICENSE.txt": "/react-pizza/static/js/2.d4b09724.chunk.js.LICENSE.txt",
     "static/media/back.3077c672.svg": "/react-pizza/static/media/back.3077c672.svg",
     "static/media/close-cart.d2ce8a9a.svg": "/react-pizza/static/media/close-cart.d2ce8a9a.svg",
@@ -19,12 +19,13 @@
     "static/media/plus.d601e9f3.svg": "/react-pizza/static/media/plus.d601e9f3.svg",
     "static/media/shopping-cart-black.99a9236c.svg": "/react-pizza/static/media/shopping-cart-black.99a9236c.svg",
     "static/media/shopping-cart.e0b31d96.svg": "/react-pizza/static/media/shopping-cart.e0b31d96.svg",
+    "static/media/text-logo.a3bfc684.png": "/react-pizza/static/media/text-logo.a3bfc684.png",
     "static/media/trash.963640b7.svg": "/react-pizza/static/media/trash.963640b7.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.81530fb3.js",
     "static/js/2.d4b09724.chunk.js",
-    "static/css/main.69cd1f58.chunk.css",
-    "static/js/main.e4f9aba5.chunk.js"
+    "static/css/main.5b60a995.chunk.css",
+    "static/js/main.75a4a7dc.chunk.js"
   ]
 }

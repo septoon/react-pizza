@@ -4,41 +4,38 @@ import minus from '../../common/img/minus.svg';
 import plus from '../../common/img/plus.svg';
 import closeCart from '../../common/img/close-cart.svg';
 
-const CartItem = ({ id, image, title, activeSize, activePrice, onClickRemovePizza }) => {
-  const [itemCount, setItemCount] = React.useState(1)
+const CartItem = ({ id, image, title, activeSize, activePrice, price, onClickRemovePizza, result }) => {
+  console.log(`${title} - ${result.length}шт.`)
 
+  
+  result.forEach(item => price += parseInt(item.activePrice) + 40)
   const onRemovePizza = () => {
     const pizzaId = id
     onClickRemovePizza(pizzaId)
-    console.log(pizzaId)
   }
 
   return (
     <div className="cart__item">
-    <div className="cart__item-img">
-      <img className="pizza-block__image"
-        src={image}
-        alt={title} />
-    </div>
-    <div className="cart__item-info">
-      <h3>{title}</h3>
-      <p>{activeSize}</p>
-    </div>
-    <div className="cart__item-count">
-      <div className="button button--outline button--circle cart__item-count-minus" onClick={ (e) => {
-        setItemCount(itemCount-1)
-        } }> 
+      <div className="cart__item-img">
+        <img className="pizza-block__image"
+          src={image}
+          alt={title} />
+      </div>
+      <div className="cart__item-info">
+        <h3>{title}</h3>
+        <p>{activeSize}</p>
+      </div>
+      <div className="cart__item-count">
+        <div  onClick={onRemovePizza} className="button button--outline button--circle cart__item-count-minus"> 
         <img src={minus} className="svg minus" alt="minus" />
       </div>
-      <b>{itemCount}</b>
-      <div className="button button--outline button--circle cart__item-count-plus" onClick={ (e) => {
-        setItemCount(itemCount+1)
-        } }> 
+      <b>{result.length}</b>
+      <div className="button button--outline button--circle cart__item-count-plus"> 
         <img src={plus} className="svg" alt="plus" />
       </div>
     </div>
     <div className="cart__item-price">
-      <b>{activePrice  * itemCount}</b>
+      <b>{price}</b>
     </div>
     <div className="cart__item-remove">
       <div className="button button--outline button--circle" onClick={ () => onRemovePizza }> 

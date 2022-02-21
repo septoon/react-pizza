@@ -1,5 +1,6 @@
 import React from 'react'
 import './Cart.css'
+import './Cart-media.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
@@ -28,9 +29,9 @@ const Cart = () => {
   const onClickClearCart = () => {
     dispatch(clearPizzaCartAC())
   }
-
+  
   return  (
-    <div className="wrapper">
+    <div className="cart_wrapper">
       <div className="content">
         { isOrder && (<Form setIsOrder={setIsOrder} 
                             onClickClearCart={onClickClearCart}
@@ -47,7 +48,7 @@ const Cart = () => {
                     <h2 className="content__title"> <img src={basket} className="bask svg" alt="basket" /> Корзина</h2>
                     <div className="cart__clear" onClick={() => {
                       let popup = window.confirm("Вы уверены, что хотите очистить корзину?") 
-                      if (popup === true) dispatch(clearPizzaCartAC())
+                      popup && dispatch(clearPizzaCartAC())
                     } }>
                       <img src={trash} alt="trash" />
                       <span>Очистить корзину</span>
@@ -55,9 +56,15 @@ const Cart = () => {
                   </div>
                   <div className="content__items">
 
-                  {items.map(item => (
-                    <CartItem  key={item.id} onClickRemovePizza={onClickRemovePizza} {...item} />
-                  ))}
+                  {items.map((item, index) => {
+                    const result = items.filter( elem => elem.id === item.id)
+                    let price = 0
+                    // items.splice(result, result.length-1)
+                    // console.log(items)
+                    return ( 
+                      <CartItem key={index} result={result} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />
+                    )
+                  })}
 
                   </div>
                   <div className="cart__bottom">
@@ -71,7 +78,7 @@ const Cart = () => {
                         <span>Вернуться назад</span>
                       </NavLink>
                       <div className="button pay-btn">
-                        <button className="btn-order" onClick={ () => setIsOrder(true) } >Оплатить сейчас</button>
+                        <button className="btn-order" onClick={ () => setIsOrder(true) }>Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -83,8 +90,8 @@ const Cart = () => {
                   <p>Вероятней всего, вы не заказывали ещё пиццу.
                      Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
                      <img src={emptyCart} alt="empty-cart-logo" className="empty-cart-logo" />
-                     <NavLink to='/catalog'>
-                        <button>Вернуться назад</button>
+                     <NavLink to='/catalog' className="cart_back_btn_wrapper">
+                        <button className="cart_back_btn">Вернуться назад</button>
                      </NavLink>
                 </div>
               )

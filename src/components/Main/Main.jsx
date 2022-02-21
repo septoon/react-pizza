@@ -1,12 +1,13 @@
 import React from 'react'
 import pizza from '../../common/img/pizza.png'
 import basket from '../../common/img/shopping-cart.svg'
-import './Main.css'
+import './css/Main.css'
+import './css/Main-media.css'
 import { NavLink } from 'react-router-dom'
 
 const Main = props => {
   return (
-    <div className='container'>
+    <div className='container main'>
       <div className='text'>
         <h1>Делись любовью с помощью пиццы</h1>
       </div>

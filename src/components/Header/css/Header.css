@@ -1,10 +1,18 @@
+.header_container {
+  height: 12vh;
+}
+
 .header_wrapper {
   padding-top: 50px;
-  height: 12vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+}
+
+.navbar_wrapper {
+  display: none;
 }
   
 .logo {
@@ -13,6 +21,31 @@
   top: -50px;
   left: -50px;
   height: 180px;
+}
+
+.text_logo {
+  display: none;
+}
+
+.navbar {
+  margin-left: 10%;
+}
+
+.nav_btn {
+  padding: 15px 25px;
+  font-size: 22px;
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #db082e;
+  color: #EB5A1E;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav_btn:focus {
+  outline: none;
+  color: #FE5F1E;;
 }
   
 .basket {
@@ -37,24 +70,3 @@
   width: 35px;
 }
   
-@media screen and (max-width: 500px) {
-    .logo {
-        margin-left: 5%;
-        height: 50px;
-    }
-
-    .contacts {
-        flex-wrap: wrap;
-        width: 45%;
-    }
-
-    a {
-        font-weight: bold;
-        color:red;
-        text-decoration: none;
-    }
-
-    .contact {
-        display: none;
-    }
-}

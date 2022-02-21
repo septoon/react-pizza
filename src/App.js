@@ -1,5 +1,9 @@
+import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
 import './App.css';
 import { Route } from 'react-router-dom'
+
+// import { setIsOpenAC } from './redux/nav-reducer';
 
 import Header from './components/Header/Header';
 import Catalogue from './components/Catalogue/Catalogue';
@@ -8,10 +12,13 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Delivery from './components/Delivery/Delivery';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
+import NavBarMobile from './components/Header/NavBarMobile';
 
 const App = () => {
+
   return (
     <div className="App">
+      <NavBarMobile />
       <Header />
       <div className='app-wrapper-content'>   
         <Route exact path='/react-pizza' component={ Main } />

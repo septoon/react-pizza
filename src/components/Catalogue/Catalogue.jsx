@@ -25,13 +25,13 @@ const Catalogue = props => {
   return (
     <div className={classes.catalog_wrapper} >
       <div className={classes.wrapper} >
-        {catalogData.map(item => (
-              <CatalogItem key={item.id}
+        {catalogData.map(item => {
+              return (<CatalogItem key={item.id}
                           onClickAddPizza={addPizzaToCart}
                           {...item}
                           toggleIsActive={toggleIsActive}
-                          isActive={isActive} />
-              ))}
+                          isActive={isActive} />)
+        })}
       </div>  
     </div>
   )

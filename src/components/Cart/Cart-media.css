@@ -1,0 +1,35 @@
+@media screen and (max-width: 414px) {
+	.content {
+		padding: 0;
+	}
+
+	.container--cart {
+		margin-top: 0;
+	}
+	
+	.empty_cart {
+		height: 90vh;
+		padding: 0 1vw;
+		position: relative;
+	}
+
+	.empty_cart h2 {
+		margin-top: 10vh;
+		margin-bottom: 2vh;
+	}
+
+	.empty_cart p {
+		margin-bottom: 2vh;
+	}
+	
+	.cart_back_btn {
+		position: absolute;
+		bottom: 20px;
+		padding: 11px 18px;
+		background-color: #FE5F1E;
+		color: #fff;
+		font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+	}
+}

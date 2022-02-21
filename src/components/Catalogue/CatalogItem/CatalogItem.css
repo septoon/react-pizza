@@ -173,8 +173,10 @@ button:focus {
   
   .catalog_item {
     width: 100%;
+    margin-top: 20px;
+    margin-top: 20px;
     justify-content: space-around;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px dashed #ccc;
   }
   
   .catalog_item:hover {
@@ -192,8 +194,12 @@ button:focus {
   }
   
   .description {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     font-size: 16px;
+  }
+
+  .packing_item {
+    margin-bottom: 10px;
   }
 
   .size_item {
@@ -206,8 +212,14 @@ button:focus {
     font-size: 26px;
   }
 
+  .price_holder {
+    margin-top: 10px;
+    padding: 0 3%;
+  }
+
   .btn_order {
     font-size: 20px;
     font-weight: bold;
+    border-radius: 10px;
   }
 }

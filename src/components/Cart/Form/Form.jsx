@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './Form.css'
 import emailjs from 'emailjs-com';
 import close from '../../../common/img/close.png'
@@ -7,7 +7,18 @@ import mask from '../../../common/other/mask';
 
 const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
   const form = useRef()
-  const input = useRef()
+  const inputTel = useRef()
+
+  const [address, setAddress] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
+
+  const handleAddressChange = (event) => {
+    setAddress(event.target.value);
+  };
+
+  const handlePhoneNumChange = (event) => {
+    setPhoneNum(event.target.value);
+  }
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -21,7 +32,7 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
   }
 
   React.useEffect(() => {
-    mask(input)
+    mask(inputTel)
   }, [])
 
   return (
@@ -30,22 +41,41 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
         <img src={close} className="close-btn" alt="close" onClick={ () => setIsOrder(false) } />
         <h2>Ваш заказ:</h2>
         <form ref={form} onSubmit={sendEmail} className="form-total">
+          <div className="order_list_wrapper">
           {
             items.map(i => (
                 <input key={i.id} className="hidden-input" name={i.id} value={`${i.title} | ${i.activeSize} | ${i.activePrice} ₽`} />
               ))
           }
-          <input className="hidden-input" name="message" value={`На сумму: ${totalPrice} ₽`} />
-          <label>Введите ваш адрес:</label>
-          <input name="address" placeholder="ул. Горького, 54" />
-          <label>Введите ваш номер телефона:</label>
-          <input  ref={input} placeholder="+7 (978) 704 88 06" name="telephone" type="tel" />
-          <button type="submit" onClick={ () => {
+          </div>
+          <div className="order_inputs_wrapper">
+            <input className="hidden-input" name="message" value={`На сумму: ${totalPrice} ₽`} />
+            <label>Введите ваш адрес:</label>
+              <div className="inp_valid">
+                <input required
+                    className="order_input"
+                    onChange={handleAddressChange}
+                    name="address"
+                    placeholder="ул. Горького, 54" />
+                { !address && <p>Поле не заполнено</p> } 
+              </div>
+            <label>Введите ваш номер телефона:</label>
+            <div className="inp_valid">
+              <input required
+                    className="order_input"
+                    onChange={handlePhoneNumChange}
+                    ref={inputTel}
+                    placeholder="+7 (978) 704 88 06"
+                    name="telephone" type="tel" />
+              { !phoneNum && <p>Поле не заполнено</p> } 
+            </div>
+          </div>
+          <button type="submit" disabled={!address} onClick={ () => {
             setTimeout( () => {
               onClickClearCart()
               setIsOrder(false)
             }, 500)
-          } }>Заказать</button>
+          } }>Отправить</button>
         </form>
       </div>
     </div>

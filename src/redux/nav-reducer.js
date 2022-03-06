@@ -1,19 +1,23 @@
-const TOGGLE_SWITCH = 'catalog/TOGGLE_SWITCH'
+const ADD_NAV_LIST = 'nav/ADD_NAV_LIST'
+const TOGGLE_IS_ACTIVE = 'nav/TOGGLE_IS_ACTIVE'
 
 const initialState = {
+  list: [],
   isOpen: false
 }
 
 const navReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TOGGLE_SWITCH:
-      debugger
-      return {...state,  isOpen: action.isOpen }
+    case ADD_NAV_LIST:
+      return {...state,  list: action.payload }
+    case TOGGLE_IS_ACTIVE:
+      return {...state,  isOpen: action.payload }
     default:
       return state
   }
 }
 
-export const setIsOpenAC = (isOpen) => ({ type: TOGGLE_SWITCH, isOpen })
+export const addNavListAC = (list) => ({ type: ADD_NAV_LIST, payload: list })
+export const toggleIsActiveAC = (isOpen) => ({ type: TOGGLE_IS_ACTIVE, payload: isOpen })
 
 export default navReducer

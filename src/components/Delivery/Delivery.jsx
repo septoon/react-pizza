@@ -23,7 +23,7 @@ const DeliveryPage = (props) => {
         <tbody>
           {list.map(i => {
             return(
-              <tr>
+              <tr className="delivery_list_item" key={i.id}>
                 <td>{i.city}</td>
                 <td>{i.price}</td>
               </tr>

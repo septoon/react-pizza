@@ -36,7 +36,7 @@
   }
   
   h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
   
   .pizza-img {
@@ -95,9 +95,13 @@
   }
 }
 
-@media screen and (max-width: 301px) {  
+@media screen and (max-width: 414px) {
+  .container {
+    overflow-x: hidden;
+  }
+    
   .text {
-    display: none;
+    /* display: none; */
   }
   
   h1 {
@@ -107,12 +111,14 @@
   .pizza-img {
     max-width: 50vh;
     max-height: 50vh;
-    bottom: 30%;
+    bottom: 20%;
+    right: -40%;
   }
 
   .order {
     padding: 10px 15px;
     bottom: 10%;
     left: 5%;
+    border-radius: 10px;
   }
 }

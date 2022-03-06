@@ -2,13 +2,23 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './css/Header.css'
 import './css/Header-media.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { addNavListAC, toggleIsActiveAC } from '../../redux/nav-reducer'
+import navBarItems from '../../common/json/navBar'
 
 const NavBarMobile = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const dispatch = useDispatch()
+  const { navList, isOpen } = useSelector(({ nav }) => ({
+    navList: nav.list,
+    isOpen: nav.isOpen
+  }))
 
-  const toggleSwitch = () => {
-      isOpen ? setIsOpen(false) : setIsOpen(true)
-  }
+  React.useEffect(() => { 
+    dispatch(addNavListAC(navBarItems))
+  }, [dispatch])
+  
+  const toggleSwitch = () => isOpen ? dispatch(toggleIsActiveAC(false)) : dispatch(toggleIsActiveAC(true))
+
   const burger = isOpen ? "burger change" : "burger"
   const barContainer = isOpen ? "navbar_mobile_container bar_active" : "navbar_mobile_container"
 
@@ -21,18 +31,17 @@ const NavBarMobile = () => {
           <div className="bar3"></div>
         </div>
         <div className='navbar_mobile'>
-          <NavLink to='/catalog' className='nav_btn_mobile' onClick={ toggleSwitch } >
-            <span>Меню</span>
-          </NavLink>
-          <NavLink to='/teaCard' className='nav_btn_mobile' onClick={ toggleSwitch } >
-            <span>Чай</span>
-           </NavLink>
-          <NavLink to='/aboutUs' className='nav_btn_mobile' onClick={ toggleSwitch } >
-            <span>О Нас</span>
-           </NavLink>
-          <NavLink to='/delivery' className='nav_btn_mobile' onClick={ toggleSwitch } >
-            <span>Доставка</span>
-           </NavLink>
+          {
+            navList.map(i => {
+              
+              return (
+                <NavLink to={i.navlink} key={i.id} className="nav_btn_mobile" 
+                onClick={ toggleSwitch } >
+                  <span>{i.name}</span>
+                </NavLink>
+              )
+            })
+          }
         </div>
       </div>
     </div>

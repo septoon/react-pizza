@@ -33,14 +33,16 @@
 
 .nav_btn {
   padding: 15px 25px;
-  font-size: 22px;
-  font-family: 'Rubik Mono One', sans-serif;
-  color: #db082e;
-  color: #EB5A1E;
   text-decoration: none;
   border: none;
   cursor: pointer;
   transition: .3s;
+}
+
+.nav_btn span {
+  font-size: 1.5em;
+  font-family: 'Russo One', sans-serif;
+  color: #EB5A1E;
 }
 
 .nav_btn:focus {

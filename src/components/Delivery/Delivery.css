@@ -18,3 +18,13 @@
 td {
   text-align: start;
 }
+
+@media screen and (max-width: 414px) {
+  .delivery-main {
+    margin-top: 10vh;
+  }
+
+  .delivery_list_item {
+    margin-bottom: 50px;
+  }
+}

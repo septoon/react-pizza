@@ -1,7 +1,6 @@
 .container {
   height: 70vh;
   position: relative;
-  overflow-x: hidden;
 }
 
 .text {

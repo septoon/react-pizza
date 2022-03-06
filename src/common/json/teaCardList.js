@@ -1,5 +1,6 @@
 const teaCardList = {
   black: [
+    {id: 0},
     {header: 'Черный чай'},
     {
       title: 'АССАМ №17',
@@ -31,6 +32,7 @@ const teaCardList = {
     }
   ],
   green: [
+    {id: 1},
     {header: 'Зеленый чай'},
     {
       title: 'ЗЕЛЕНАЯ УЛИТКА',
@@ -54,6 +56,7 @@ const teaCardList = {
     }
   ],
   kupa: [
+    {id: 2},
     {header: 'Купажи'},
     {
       title: 'ИСКРЫ ШАМПАНСКОГО',
@@ -65,6 +68,7 @@ const teaCardList = {
     }
   ],
   hurble: [
+    {id: 3},
     {header: 'Травяные и фруктовые смеси'},
     {
       title: 'АЛЬПИЙСКИЙ ЛУГ',
@@ -88,6 +92,7 @@ const teaCardList = {
     }
   ],
   elite: [
+    {id: 4},
     {header: 'Элитные связанные чаи'},
     {
       title: 'БОГИНЯ МИЛОСЕРДИЯ',

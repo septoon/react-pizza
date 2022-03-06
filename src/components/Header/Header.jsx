@@ -30,7 +30,7 @@ const Header = () => {
                 <div className='contacts'>
                 <div className='basket' >
                     <div className="total_count">
-                            <span>{totalPrice} ₽</span>
+                        <span>{totalPrice} ₽</span>
                     </div>
                     <span>|</span>
                     <div className="basket_icon">

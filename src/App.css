@@ -4,8 +4,7 @@
   font-family: sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Jura&family=Rubik+Mono+One&family=Russo+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Jura&family=Rubik+Mono+One&family=Russo+One&display=swap');
 body {
   background-color: #FFDF8C;
   padding: 43px 0;
@@ -42,14 +41,24 @@ body {
   body {
     padding: 0;
   }
+
+  .app-wrapper-content {
+    position: relative;
+  }
+
+  .blured {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+    transition: .5s;
+  }
 }
 
 @media screen and (max-width: 414px) {
   .App {
     padding: 0;
-  }
-
-  .app-wrapper-content {
-    padding-top: 10vh;
   }
 }

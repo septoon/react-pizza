@@ -42,3 +42,9 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .teaCard_wrapper {
+    margin-top: 10vh;
+  }
+}

@@ -26,8 +26,9 @@
  .container {
 	 max-width: 1340px;
 	 margin: 0 auto;
-}
- .container--cart {
+	}
+	.container--cart {
+	 height: auto;
 	 max-width: 820px;
 	 margin-top: 90px;
 }
@@ -193,13 +194,13 @@
  .cart__bottom-buttons .go-back-btn:hover span {
 	 color: rgb(255, 255, 255);
 }
-
+/* 
  .cart__bottom-buttons .pay-btn {
 	 font-size: 16px;
 	 font-weight: 600;
 	 width: 210px;
 	 padding: 16px;
-}
+} */
  .cart--empty {
 	 margin: 0 auto;
 	 width: 560px;

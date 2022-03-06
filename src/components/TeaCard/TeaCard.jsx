@@ -6,7 +6,7 @@ const TeaCard = ({ teaCardPage }) => {
   const cardDataKeys = Object.keys(cardData)
   return (
     <div className={classes.teaCard_wrapper}>
-      {cardDataKeys.map(c => <div className={classes.card_wrap}>
+      {cardDataKeys.map(c => <div className={classes.card_wrap} key={c.id}>
         {
           cardData[c]
           .map(el => <div className={classes.card_items} >

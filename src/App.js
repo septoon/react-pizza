@@ -15,12 +15,14 @@ import Cart from './components/Cart/Cart';
 import NavBarMobile from './components/Header/NavBarMobile';
 
 const App = () => {
-
+  const { isOpen } = useSelector(({ nav }) => ({ isOpen: nav.isOpen }))
+  // const blured = isOpen ? "app-wrapper-content blured" : "app-wrapper-content"
   return (
     <div className="App">
       <NavBarMobile />
       <Header />
-      <div className='app-wrapper-content'>   
+      <div className="app-wrapper-content">
+        {isOpen && ( <div className="blured"></div> )}
         <Route exact path='/react-pizza' component={ Main } />
         <Route path='/catalog' component={ Catalogue } />
         <Route path='/teaCard' component={ TeaCardContainer } />

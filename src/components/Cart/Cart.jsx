@@ -73,11 +73,10 @@ const Cart = () => {
                       <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
                     </div>
                     <div className="cart__bottom-buttons">
-                      <NavLink to='/catalog'>
-                        <img src={back} className="svg back" alt="back" />
-                        <span>Вернуться назад</span>
+                      <NavLink to='/catalog' className="cart_bottom">
+                        <button>Вернуться назад</button>
                       </NavLink>
-                      <div className="button pay-btn">
+                      <div className="button pay-btn cart_bottom">
                         <button className="btn-order" onClick={ () => setIsOrder(true) }>Заказать</button>
                       </div>
                     </div>

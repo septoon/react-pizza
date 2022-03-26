@@ -25,7 +25,8 @@
 	
 	.cart_back_btn {
 		position: absolute;
-		bottom: 20px;
+		bottom: 10vh;
+		left: 2vw;
 		padding: 11px 18px;
 		background-color: #FE5F1E;
 		color: #fff;

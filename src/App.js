@@ -13,13 +13,15 @@ import Delivery from './components/Delivery/Delivery';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
 import NavBarMobile from './components/Header/NavBarMobile';
+import NavMobile from './components/NavMobile/NavMobile';
 
 const App = () => {
   const { isOpen } = useSelector(({ nav }) => ({ isOpen: nav.isOpen }))
   // const blured = isOpen ? "app-wrapper-content blured" : "app-wrapper-content"
   return (
     <div className="App">
-      <NavBarMobile />
+      {/* <NavBarMobile />  */}
+      <NavMobile />
       <Header />
       <div className="app-wrapper-content">
         {isOpen && ( <div className="blured"></div> )}

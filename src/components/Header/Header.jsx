@@ -28,18 +28,18 @@ const Header = () => {
                 <img src={textLogo} alt="vivat pizza" className="text_logo" />
                 <NavBar />
                 <div className='contacts'>
-                <div className='basket' >
-                    <div className="total_count">
-                        <span>{totalPrice} ₽</span>
+                    <div className='basket' >
+                        <div className="total_count">
+                            <span>{totalPrice} ₽</span>
+                        </div>
+                        <span>|</span>
+                        <div className="basket_icon">
+                            <NavLink to='/cart' >
+                                <img src={basket} alt='shopping cart' />
+                            </NavLink>
+                            <span>{totalCount}</span>
+                        </div>
                     </div>
-                    <span>|</span>
-                    <div className="basket_icon">
-                        <NavLink to='/cart' >
-                            <img src={basket} alt='shopping cart' />
-                        </NavLink>
-                        <span>{totalCount}</span>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>

@@ -42,6 +42,10 @@ body {
     padding: 0;
   }
 
+  .App {
+    border-radius: 0;
+  }
+
   .app-wrapper-content {
     position: relative;
   }
@@ -60,5 +64,12 @@ body {
 @media screen and (max-width: 414px) {
   .App {
     padding: 0;
+    border-radius: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .App {
+    background-color: #181a1b !important;
   }
 }

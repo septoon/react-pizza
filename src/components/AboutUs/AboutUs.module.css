@@ -16,6 +16,19 @@
 
 @media screen and (max-width: 414px) {
   .wrapper {
-    margin-top: 10vh;
+    margin: 0;
+    margin-top: 8vh;
+    height: 92vh;
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .title {
+    margin: 2vh 0;
+    font-size: 3em;
+  }
+
+  .wrapper span {
+    font-size: 1em;
   }
 }

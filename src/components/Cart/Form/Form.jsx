@@ -12,6 +12,12 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
   const [address, setAddress] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
 
+  const [value, setValue] = useState('');
+   
+   function changeValue(e) {
+      setValue(e.target.value);
+   }
+
   const handleAddressChange = (event) => {
     setAddress(event.target.value);
   };
@@ -51,14 +57,14 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
           <div className="order_inputs_wrapper">
             <input className="hidden-input" name="message" value={`На сумму: ${totalPrice} ₽`} />
             <label>Введите ваш адрес:</label>
-              <div className="inp_valid">
-                <input required
-                    className="order_input"
-                    onChange={handleAddressChange}
-                    name="address"
-                    placeholder="ул. Горького, 54" />
-                { !address && <p>Поле не заполнено</p> } 
-              </div>
+            <div className="inp_valid">
+              <input required
+                  className="order_input"
+                  onChange={handleAddressChange}
+                  name="address"
+                  placeholder="ул. Горького, 54" />
+              { !address && <p>Поле не заполнено</p> } 
+            </div>
             <label>Введите ваш номер телефона:</label>
             <div className="inp_valid">
               <input required
@@ -69,6 +75,15 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
                     name="telephone" type="tel" />
               { !phoneNum && <p>Поле не заполнено</p> } 
             </div>
+            <label>Спооб оплаты:</label>
+            <div className="payment" name="checkbox">
+              <div className="payment_method">
+                <input  type="radio" onChange={changeValue} value="Наличные" name='cash' checked={value === 'Наличные' ? true : false}/> <label for="cash">Наличные</label>
+              </div>
+              <div className="payment_method">
+                <input  type="radio" onChange={changeValue} value="Карта" name='cart' checked={value === 'Карта' ? true : false}/> <label for="cart">Карта</label>
+              </div>
+            </div> 
           </div>
           <button type="submit" disabled={!address} onClick={ () => {
             setTimeout( () => {

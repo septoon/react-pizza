@@ -71,4 +71,9 @@
 .bask {
   width: 35px;
 }
-  
+
+@media (prefers-color-scheme: dark) {
+  .nav_btn span {
+    color: #F8B90C;
+  }
+}

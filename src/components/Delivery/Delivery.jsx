@@ -18,7 +18,7 @@ const DeliveryPage = (props) => {
   return (
     <div className='delivery-main'>
       <div className='delivery-list'>
-        <h1>Доставка</h1>
+        <h1 className="delivery_title">Доставка</h1>
         <table border="0">
         <tbody>
           {list.map(i => {

@@ -21,7 +21,7 @@ const Header = () => {
     
      return (    
         <div className="header_container">
-            <div className='header_wrapper'>            
+            <div className='header_wrapper'>
                 <NavLink to='/react-pizza' >
                     <img src={logo} alt="logo" className='logo' />
                 </NavLink>

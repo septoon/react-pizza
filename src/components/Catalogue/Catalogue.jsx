@@ -22,6 +22,7 @@ const Catalogue = props => {
     dispatch(addPizzaToCartAC(obj))
   }
   
+  
   return (
     <div className={classes.catalog_wrapper} >
       <div className={classes.wrapper} >

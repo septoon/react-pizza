@@ -21,10 +21,16 @@ td {
 
 @media screen and (max-width: 414px) {
   .delivery-main {
-    margin-top: 10vh;
+    margin-top: 8vh;
+    height: 92vh;
+    padding-bottom: 0;
   }
 
   .delivery_list_item {
     margin-bottom: 50px;
+  }
+
+  .delivery_title {
+    margin: 2vh 0;
   }
 }

@@ -265,3 +265,16 @@
 .btn-order {
 	cursor: pointer;
 }
+
+@media (prefers-color-scheme: dark) {
+  .empty_cart {
+    background-color: #181a1b;
+  }
+
+  .empty_cart h2, .empty_cart p {
+    color: #fff;
+  }
+  .cart_back_btn {
+    border: none;
+  }
+}

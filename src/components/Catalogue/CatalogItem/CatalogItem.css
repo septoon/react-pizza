@@ -144,6 +144,26 @@ button:focus {
   color: #fff;
 }
 
+@media (prefers-color-scheme: dark) {
+  span, b {
+    color: #ccc;
+  }
+
+  .size_item, .packing_item {
+    background-color: #ccc;
+    border: none;
+    border: .5px solid #444;
+  }
+
+  .packing_item {
+    color: #444;
+  }
+
+  .btn_order {
+    border: none;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .wrapper {
     width: 100%;
@@ -166,6 +186,7 @@ button:focus {
   .btn_order {
     font-size: .5em;
     padding: 7px 14px;
+    border-radius: 5px;
   }
 }
 
@@ -236,10 +257,6 @@ button:focus {
     .catalog_item {
       height: 85vh;
       justify-content: space-around;
-    }
-
-    .catalog_item_block {
-      
     }
 
     .price_holder {

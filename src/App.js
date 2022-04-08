@@ -12,16 +12,17 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Delivery from './components/Delivery/Delivery';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
-import NavBarMobile from './components/Header/NavBarMobile';
 import NavMobile from './components/NavMobile/NavMobile';
+import NavMobileCopy from './components/NavMobile/NavMobileCopy';
 
 const App = () => {
   const { isOpen } = useSelector(({ nav }) => ({ isOpen: nav.isOpen }))
   // const blured = isOpen ? "app-wrapper-content blured" : "app-wrapper-content"
+  console.log(window.matchMedia('(prefers-color-scheme: dark)').matches)
   return (
     <div className="App">
       {/* <NavBarMobile />  */}
-      <NavMobile />
+      <NavMobileCopy />
       <Header />
       <div className="app-wrapper-content">
         {isOpen && ( <div className="blured"></div> )}
@@ -29,8 +30,8 @@ const App = () => {
         <Route path='/catalog' component={ Catalogue } />
         <Route path='/teaCard' component={ TeaCardContainer } />
         <Route path='/aboutUs' component={ AboutUs } />
-        <Route path='/delivery' component={ Delivery } />
         <Route path='/cart' component={ Cart } />
+        <Route path='/delivery' component={ Delivery } />
       </div>
     </div>
   );

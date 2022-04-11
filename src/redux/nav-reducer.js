@@ -3,7 +3,7 @@ const TOGGLE_IS_ACTIVE = 'nav/TOGGLE_IS_ACTIVE'
 
 const initialState = {
   list: [],
-  isOpen: false
+  isOpen: true
 }
 
 const navReducer = (state = initialState, action) => {

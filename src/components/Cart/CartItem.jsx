@@ -29,7 +29,7 @@ const CartItem = ({ id, image, title, activeSize, activePrice, price, onClickRem
         <div  onClick={onRemovePizza} className="button button--outline button--circle cart__item-count-minus"> 
         <img src={minus} className="svg minus" alt="minus" />
       </div>
-      <b>{result.length}</b>
+      <b>1</b>
       <div className="button button--outline button--circle cart__item-count-plus"> 
         <img src={plus} className="svg" alt="plus" />
       </div>

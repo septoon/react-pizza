@@ -80,38 +80,6 @@
       transform: translateY(40px);
   }
 
-  .indicator {
-      position: absolute;
-      top: -20%;
-      left: 0;
-      border-radius: 50%;
-      width: 20vw;
-      height: 20vw;
-      background: var(--clr);
-      backdrop-filter: blur(6px);
-      transition: .5s;
-  }
-
-  .navigation ul a:nth-child(1).active ~ .indicator {
-      transform: translateX(calc(20vw * 0));
-  }
-
-  .navigation ul a:nth-child(2).active ~ .indicator {
-      transform: translateX(calc(20vw * 1));
-  }
-
-  .navigation ul a:nth-child(3).active ~ .indicator {
-      transform: translateX(calc(20vw * 2));
-  }
-
-  .navigation ul a:nth-child(4).active ~ .indicator {
-      transform: translateX(calc(20vw * 3));
-  }
-
-  .navigation ul a:nth-child(5).active ~ .indicator {
-      transform: translateX(calc(20vw * 4));
-  }
-
   .border_top {
     position: absolute;
     height: 10px;
@@ -120,5 +88,11 @@
     top: -10px;
     background: rgba(255, 255, 255, .7);
     backdrop-filter: blur(6px);
+  }
+  @media (prefers-color-scheme: dark) {
+    .navigation {
+      background-color: rgba(28, 28, 30, .8);
+      backdrop-filter: blur(6px);
+    }
   }
 }

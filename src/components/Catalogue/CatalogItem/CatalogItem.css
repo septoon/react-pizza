@@ -23,14 +23,17 @@
 }
 
 .name {
-  font-size: 1.25em;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.3em;
   font-weight: 800;
   margin-bottom: 10px;
 }
 
 .description {
   margin-bottom: 10px;
-  font-size: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: .9em;
+  font-weight: 300;
 }
 
 .name_holder {
@@ -53,8 +56,9 @@
 
 .size_item {
   width: 34%;
+  font-family: 'Jost', sans-serif;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 600;
   border: .5px solid #ddd;
   border-radius: 5px;
   padding: 5px 8px;
@@ -62,8 +66,9 @@
 
 .packing_item {
   width: 100%;
+  font-family: 'Jost', sans-serif;
   font-size: .8em;
-  font-weight: bold;
+  font-weight: 500;
   border: .5px solid #ddd;
   border-radius: 5px;
   padding: 5px 8px;
@@ -99,11 +104,12 @@
 }
 
 .btn_order {
-  padding: 11px 18px;
+  padding: 8px 18px;
   background-color: #FE5F1E;
   color: #fff;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
   font-size: 1em;
-  font-weight: 700;
   border-radius: 30px;
 }
 
@@ -150,13 +156,18 @@ button:focus {
   }
 
   .size_item, .packing_item {
-    background-color: #ccc;
-    border: none;
-    border: .5px solid #444;
+    background-color: #39383D;
+    /* border: none; */
+    border: .5px solid #2c2b2f;
+    color: #fff;
   }
 
-  .packing_item {
-    color: #444;
+  .size_item {
+    border: none;
+  }
+
+  .size_item:hover, .size_item:focus {
+    background-color: rgb(177, 165, 165);
   }
 
   .btn_order {
@@ -225,7 +236,7 @@ button:focus {
   
   .description {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 1.2em;
   }
 
   .packing_item {
@@ -235,7 +246,7 @@ button:focus {
   .size_item {
     font-size: 18px;
     font-weight: bold;
-    border: 1px solid #ddd;
+    border: 1px solid #4f4d55;
   }
 
   .price {

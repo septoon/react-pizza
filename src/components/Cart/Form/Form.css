@@ -64,10 +64,22 @@ input:focus::placeholder {
   display: flex;
   align-items: center;
 }
+
 .inp_valid p {
   color: red;
   margin-left: 5%;
   font-size: .5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .email-form-wrapper {
+    background-color: #000;
+  }
+  
+  h2, input, label {
+    color: #ccc;
+
+  }
 }
 
 @media screen and (max-width: 414px) {

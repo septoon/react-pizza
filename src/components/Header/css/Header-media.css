@@ -105,4 +105,10 @@
     border-radius: 10px;
     width: 130px;
   }
+
+  @media (prefers-color-scheme: dark) {
+    .header_wrapper {
+      background-color: #1C1C1E;
+    }
+  }
 }

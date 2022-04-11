@@ -125,5 +125,10 @@
     border-radius: 8px;
 	}
 
+	@media (prefers-color-scheme: dark) {
+		button {
+			border: none;
+		}
+	}
 
 }

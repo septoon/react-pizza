@@ -80,34 +80,39 @@
 	 display: flex;
 	 width: 100%;
 	 padding-top: 30px;
-	 margin-top: 30px;
-}
- .cart__item-img {
-	 display: flex;
-	 align-items: center;
-	 margin-right: 15px;
-	 width: 10%;
-}
- .cart__item-img img {
-	 width: 80px;
-	 height: 80px;
-}
- .cart__item-info {
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: center;
-	 width: 40%;
-}
- .cart__item-info h3 {
-	 font-weight: bold;
-	 font-size: 22px;
-	 line-height: 27px;
-	 letter-spacing: 0.01em;
-}
- .cart__item-info p {
-	 font-size: 18px;
-	 color: #8d8d8d;
-}
+	 margin-top: 30px;	 
+	}
+	.cart__item-img {
+		display: flex;
+		align-items: center;
+		margin-right: 15px;
+		width: 10%;
+	}
+	.cart__item-img img {
+		width: 80px;
+		height: 80px;
+	}
+	.cart__item-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 40%;
+	}
+	.cart__item-info h3 {
+		font-weight: bold;
+		font-size: 22px;
+		line-height: 27px;
+		letter-spacing: 0.01em;
+	}
+	.cart__item-info p {
+		font-size: 18px;
+		color: #8d8d8d;
+	}
+	
+	.cart__item-info h3, p, .cart__item-count b {
+		font-family: 'Jost', sans-serif;
+	}
+
  .cart__item-count {
 	 display: flex;
 	 align-items: center;
@@ -194,44 +199,6 @@
  .cart__bottom-buttons .go-back-btn:hover span {
 	 color: rgb(255, 255, 255);
 }
-/* 
- .cart__bottom-buttons .pay-btn {
-	 font-size: 16px;
-	 font-weight: 600;
-	 width: 210px;
-	 padding: 16px;
-} */
- .cart--empty {
-	 margin: 0 auto;
-	 width: 560px;
-	 text-align: center;
-}
- .cart--empty h2 {
-	 font-size: 32px;
-	 margin-bottom: 10px;
-}
- .cart--empty p {
-	 font-size: 18px;
-	 line-height: 145.4%;
-	 letter-spacing: 0.01em;
-	 color: #777;
-}
- .cart--empty icon {
-	 position: relative;
-	 top: 2px;
-}
- .cart--empty img {
-	 display: block;
-	 width: 300px;
-	 margin: 45px auto 60px;
-}
- .cart--empty .button--black {
-	 padding: 12px 0 14px;
-	 width: 230px;
-	 margin: 0 auto;
-	 font-weight: 600;
-	 font-size: 18px;
-}
 
 .svg {
   width: 32px;
@@ -256,6 +223,15 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 50vh;
+}
+
+.empty_cart h2, p, .cart h2, span, .cart__bottom span, b {
+	font-family: 'Jost', sans-serif;
+}
+
+ p {
+	font-weight: 300;
 }
 
 .empty-cart-logo {
@@ -268,7 +244,7 @@
 
 @media (prefers-color-scheme: dark) {
   .empty_cart {
-    background-color: #181a1b;
+    
   }
 
   .empty_cart h2, .empty_cart p {

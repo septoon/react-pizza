@@ -6,11 +6,12 @@ import { NavLink } from 'react-router-dom'
 
 import basket from '../../common/img/shopping-cart-black.svg';
 import trash from '../../common/img/trash.svg';
-import back from '../../common/img/back.svg';
 import emptyCart from '../../common/img/empty-cart.svg';
+import emptyCartDark from '../../common/img/empty-cart-dark.svg';
 import { clearPizzaCartAC, removePizzaAC } from '../../redux/cart-reducer';
 import CartItem from './CartItem';
 import Form from './Form/Form';
+import { toggleIsActiveAC } from '../../redux/nav-reducer'
 
 const Cart = () => {
   const dispatch = useDispatch()
@@ -21,6 +22,10 @@ const Cart = () => {
     totalCount: cart.totalCount
   }))
 
+  const { isDark } = useSelector(({ dark }) => ({
+    isDark: dark.isDark
+  }))
+
   const [isOrder, setIsOrder] = React.useState(false)
 
   const onClickRemovePizza = (pizzaId) => {
@@ -29,7 +34,6 @@ const Cart = () => {
   const onClickClearCart = () => {
     dispatch(clearPizzaCartAC())
   }
-  
   return  (
     <div className="cart_wrapper">
       <div className="content">
@@ -59,8 +63,7 @@ const Cart = () => {
                   {items.map((item, index) => {
                     const result = items.filter( elem => elem.id === item.id)
                     let price = 0
-                    // items.splice(result, result.length-1)
-                    // console.log(items)
+                    
                     return ( 
                       <CartItem key={index} result={result} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />
                     )
@@ -73,7 +76,7 @@ const Cart = () => {
                       <span> Сумма заказа: <b>{totalPrice} ₽</b> </span>
                     </div>
                     <div className="cart__bottom-buttons">
-                      <NavLink to='/catalog' className="cart_bottom">
+                      <NavLink to='/catalog' className="cart_bottom" onClick={ () => dispatch(toggleIsActiveAC(true))}>
                         <button>Вернуться назад</button>
                       </NavLink>
                       <div className="button pay-btn cart_bottom">
@@ -88,7 +91,11 @@ const Cart = () => {
                   <h2>Корзина пустая</h2>
                   <p>Вероятней всего, вы не заказывали ещё пиццу.
                      Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
-                     <img src={emptyCart} alt="empty-cart-logo" className="empty-cart-logo" />
+                     {
+                       isDark ? (<img src={emptyCartDark} alt="empty-cart-logo" className="empty-cart-logo" />)
+                        : (<img src={emptyCart} alt="empty-cart-logo" className="empty-cart-logo" />)
+                     }
+                     
                      <NavLink to='/catalog' className="cart_back_btn_wrapper">
                         <button className="cart_back_btn">Вернуться назад</button>
                      </NavLink>

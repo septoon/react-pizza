@@ -77,7 +77,7 @@ const Cart = () => {
                     </div>
                     <div className="cart__bottom-buttons">
                       <NavLink to='/catalog' className="cart_bottom" onClick={ () => dispatch(toggleIsActiveAC(true))}>
-                        <button>Вернуться назад</button>
+                        <button className="cart_back_btn">Вернуться назад</button>
                       </NavLink>
                       <div className="button pay-btn cart_bottom">
                         <button className="btn-order" onClick={ () => setIsOrder(true) }>Заказать</button>

@@ -45,7 +45,7 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
     <div className="email-form">
       <div className="email-form-wrapper">
         <img src={close} className="close-btn" alt="close" onClick={ () => setIsOrder(false) } />
-        <h2>Ваш заказ:</h2>
+        <h2 className="form-title">Ваш заказ:</h2>
         <form ref={form} onSubmit={sendEmail} className="form-total">
           <div className="order_list_wrapper">
           {
@@ -85,7 +85,7 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
               </div>
             </div> 
           </div>
-          <button type="submit" disabled={!address} onClick={ () => {
+          <button type="submit" disabled={!address} className="btn-order" onClick={ () => {
             setTimeout( () => {
               onClickClearCart()
               setIsOrder(false)

@@ -37,12 +37,12 @@ const Cart = () => {
   return  (
     <div className="cart_wrapper">
       <div className="content">
+        <div className="container container--cart">
         { isOrder && (<Form setIsOrder={setIsOrder} 
                             onClickClearCart={onClickClearCart}
                             items={items} 
                             totalCount={totalCount} 
                             totalPrice={totalPrice} />) }
-        <div className="container container--cart">
           <div className="cart">
             {
               items.length ?

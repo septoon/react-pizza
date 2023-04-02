@@ -1,9 +1,9 @@
-import pepperoni from '../img/pepperoni.png'
+// import pepperoni from '../img/pepperoni.png'
 
 const catalogList = [
   {
     'title': 'Пицца с тунцом',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/punez.png',
     'prices': [ '400', '700', '900', ],
     'composition': 'тунец, сыр пармезан, соус, оливки, помидоры',
     'isChange': false, 
@@ -11,7 +11,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Маргарита"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/margarita.png',
     'prices': [ '340', '420', '560', ],
     'composition': 'сыр, соус, помидор, зелень',
     'isChange': false, 
@@ -19,7 +19,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца Вегетарианская',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/vegani.png',
     'prices': [ '340', '480', '690', ],
     'composition': 'сыр, соус, помидор, кукуруза, болгарский перец, грибы, брокколи, маслины',
     'isChange': false, 
@@ -27,7 +27,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца 4 сыра',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/4sira.png',
     'prices': [ '440', '680', '800', ],
     'composition': 'пармезан, моцарелла, гауда, эдам, соус',
     'isChange': false, 
@@ -35,7 +35,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Грибная"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/gribi.png',
     'prices': [ '355', '520', '680', ],
     'composition': 'сыр, соус, помидор, шампиньоны, зелень, болгарский перец',
     'isChange': false, 
@@ -43,7 +43,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Антонио"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/margarita.png',
     'prices': [ '365', '520', '730', ],
     'composition': 'сыр, соус, салями, грибы, болгарский перец, кукуруза, зелень',
     'isChange': false, 
@@ -51,7 +51,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца Классика',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/vegani.png',
     'prices': [ '380', '510', '650', ],
     'composition': 'сыр, соус, салями, ветчина, грибы, помидор, сыр',
     'isChange': false, 
@@ -59,7 +59,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца Пикассо',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/picaso.png',
     'prices': [ '360', '520', '665', ],
     'composition': 'сыр, соус, салями, буженина, помидоры, кукуруза',
     'isChange': false, 
@@ -67,7 +67,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Прошуто"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/proshito.png',
     'prices': [ '365', '520', '730', ],
     'composition': 'сыр, соус, помидор, ветчина, грибы',
     'isChange': false, 
@@ -75,7 +75,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Курица с грибами"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/kashagribi.png',
     'prices': [ '380', '580', '700', ],
     'composition': 'сыр, соус, курица, грибы, зелень по желанию',
     'isChange': false, 
@@ -83,7 +83,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Гавайская"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/gavai.png',
     'prices': [ '350', '580', '690', ],
     'composition': 'сыр, соус, курица или ветчина, ананас',
     'isChange': false, 
@@ -91,7 +91,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Морская"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/morskay.png',
     'prices': [ '470', '750', '900', ],
     'composition': 'мидии, осьминоги, креветки, кальмары, сыр, соус, зелень',
     'isChange': false, 
@@ -99,7 +99,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Микс"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/mix.png',
     'prices': [ '490', '680', '900', ],
     'composition': 'сыр, соус, салями, ветчина, буженина, курица, грибы, сладкий перец',
     'isChange': false, 
@@ -107,7 +107,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Салями"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/salami.png',
     'prices': [ '350', '510', '650', ],
     'composition': 'сыр, соус, салями, маслины',
     'isChange': false, 
@@ -115,7 +115,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "С сёмгой"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/ssemgoi.png',
     'prices': [ '460', '740', '900', ],
     'composition': 'сыр, соус, оливки, сёмга, креветки',
     'isChange': false, 
@@ -123,7 +123,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Пеперони"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/peperoni.png',
     'prices': [ '340', '490', '650', ],
     'composition': 'сыр, соус, перерони, болгарский перец',
     'isChange': false, 
@@ -131,7 +131,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Vivat"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/vivat.png',
     'prices': [ '440', '620', '800', ],
     'composition': 'сыр, соус, свинина, буженина, пеперони, грибы, зелень',
     'isChange': false, 
@@ -139,7 +139,7 @@ const catalogList = [
   },
   {
     'title': 'Пицца "Пармезан"',
-    'image': pepperoni,
+    'image': 'http://www.pizza.vivatalushta.ru/images/pizza/parmezan.png',
     'prices': [ '400', '500', '800', ],
     'composition': 'сыр, соус, свинина, помидор',
     'isChange': false, 

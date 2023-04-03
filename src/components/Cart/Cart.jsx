@@ -38,8 +38,14 @@ const Cart = () => {
     return acc;
   }, []);
 
-  console.log(items)
-  console.log(uniqueProducts)
+  const countById = (items, id) => {
+    return items.reduce((count, i) => {
+      if (i.id === id) {
+        return count + 1;
+      }
+      return count;
+    }, 0);
+  }
 
   const [isOrder, setIsOrder] = React.useState(false)
 
@@ -78,9 +84,10 @@ const Cart = () => {
                   {uniqueProducts.map((item, index) => {
                     const result = items.filter( elem => elem.id === item.id)
                     let price = 0
+                    const count = countById(items, item.id)
                     
                     return ( 
-                      <CartItem key={index} result={result} count={totalCount} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />
+                      <CartItem key={index} result={result} count={count} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />
                     )
                   })}
 

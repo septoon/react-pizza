@@ -5,7 +5,7 @@ import close from '../../../common/img/close.png'
 import mask from '../../../common/other/mask';
 // import ReactInputMask from 'react-input-mask';
 
-const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
+const Form = ({ setIsOrder, items, countById, totalItems, onClickClearCart, totalPrice }) => {
   const form = useRef()
   const inputTel = useRef()
 
@@ -49,9 +49,12 @@ const Form = ({ setIsOrder, items, onClickClearCart, totalPrice }) => {
         <form ref={form} onSubmit={sendEmail} className="form-total">
           <div className="order_list_wrapper">
           {
-            items.map(i => (
-                <input key={i.id} className="hidden-input" name={i.id} value={`${i.title} | ${i.activeSize} | ${i.activePrice} ₽`} />
-              ))
+            items.map(i => {
+              const count = countById(totalItems, i.id)
+              return (
+                <input key={i.id} className="hidden-input" name={i.id} value={`${i.title} | ${i.activeSize} | ${i.activePrice} ₽ | x ${count}шт.`} />
+              )
+            })
           }
           </div>
           <div className="order_inputs_wrapper">

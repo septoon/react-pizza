@@ -61,7 +61,9 @@ const Cart = () => {
         <div className="container container--cart">
         { isOrder && (<Form setIsOrder={setIsOrder} 
                             onClickClearCart={onClickClearCart}
-                            items={items} 
+                            countById={countById}
+                            totalItems={items}
+                            items={uniqueProducts} 
                             totalCount={totalCount} 
                             totalPrice={totalPrice} />) }
           <div className="cart">

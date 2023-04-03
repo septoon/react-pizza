@@ -4,9 +4,7 @@ import minus from '../../common/img/minus.svg';
 import plus from '../../common/img/plus.svg';
 import closeCart from '../../common/img/close-cart.svg';
 
-const CartItem = ({ id, image, title, activeSize, activePrice, price, onClickRemovePizza, result }) => {
-  console.log(`${title} - ${result.length}шт.`)
-
+const CartItem = ({ id, image, title, activeSize, activePrice, price, count, onClickRemovePizza, result }) => {
   
   result.forEach(item => price += parseInt(item.activePrice) + 40)
   const onRemovePizza = () => {
@@ -26,10 +24,10 @@ const CartItem = ({ id, image, title, activeSize, activePrice, price, onClickRem
         <p>{activeSize}</p>
       </div>
       <div className="cart__item-count">
-        <div  onClick={onRemovePizza} className="button button--outline button--circle cart__item-count-minus"> 
+        <div className="button button--outline button--circle cart__item-count-minus"> 
         <img src={minus} className="svg minus" alt="minus" />
       </div>
-      <b>1</b>
+      <b>{count}</b>
       <div className="button button--outline button--circle cart__item-count-plus"> 
         <img src={plus} className="svg" alt="plus" />
       </div>
@@ -38,7 +36,7 @@ const CartItem = ({ id, image, title, activeSize, activePrice, price, onClickRem
       <b>{price}</b>
     </div>
     <div className="cart__item-remove">
-      <div className="button button--outline button--circle" onClick={ () => onRemovePizza }> 
+      <div className="button button--outline button--circle" onClick={onRemovePizza}> 
         <img src={closeCart} className="close-cart svg" alt="closeCart" /> 
       </div>
     </div>

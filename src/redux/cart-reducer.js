@@ -36,9 +36,12 @@ const cartReducer = (state = initialState, action) => {
       return newState
     }
     case MINUS_PIZZA: {
-      debugger
-      if(state.items.length > 1) state.items.shift()
-      return state
+      const idToRemove = action.payload;
+      const updatedItems = state.items.filter(item => item.id !== idToRemove);
+      return {
+        ...state,
+        items: updatedItems
+      }
     }
     default:
       return state

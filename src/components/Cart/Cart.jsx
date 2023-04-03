@@ -26,6 +26,21 @@ const Cart = () => {
     isDark: dark.isDark
   }))
 
+  // Создайте новый массив уникальных элементов, используя метод reduce().
+  const uniqueProducts = items.reduce((acc, current) => {
+    // Проверяем, есть ли элемент с таким же id в массиве acc
+    const isDuplicate = acc.find((item) => item.id === current.id);
+    // Если элемент не найден, добавляем его в массив acc.
+    if (!isDuplicate) {
+      acc.push(current);
+    }
+    // Возвращаем массив acc на каждой итерации
+    return acc;
+  }, []);
+
+  console.log(items)
+  console.log(uniqueProducts)
+
   const [isOrder, setIsOrder] = React.useState(false)
 
   const onClickRemovePizza = (pizzaId) => {
@@ -60,12 +75,12 @@ const Cart = () => {
                   </div>
                   <div className="content__items">
 
-                  {items.map((item, index) => {
+                  {uniqueProducts.map((item, index) => {
                     const result = items.filter( elem => elem.id === item.id)
                     let price = 0
                     
                     return ( 
-                      <CartItem key={index} result={result} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />
+                      <CartItem key={index} result={result} count={totalCount} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />
                     )
                   })}
 

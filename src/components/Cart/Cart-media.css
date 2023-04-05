@@ -5,27 +5,27 @@
 
   .container--cart {
     margin-top: 0;
-    height: 100dvh;
+    height: 100ddvh;
   }
 
   .empty_cart {
-    height: 90dvh;
+    height: 90ddvh;
     padding: 0 1vw;
     position: relative;
   }
 
   .empty_cart h2 {
-    margin-top: 10dvh;
-    margin-bottom: 2dvh;
+    margin-top: 10ddvh;
+    margin-bottom: 2ddvh;
   }
 
   .empty_cart p {
-    margin-bottom: 2dvh;
+    margin-bottom: 2ddvh;
   }
 
   .cart_back_btn {
     position: absolute;
-    bottom: 10dvh;
+    bottom: 10ddvh;
     left: 2vw;
     padding: 11px 18px;
     background-color: #fe5f1e;
@@ -36,13 +36,13 @@
   }
   /* Если в корзине что-то есть */
   .cart {
-    margin-top: 8dvh;
-    height: 90dvh;
+    margin-top: 8ddvh;
+    height: 90ddvh;
   }
 
   .cart__top {
     margin-left: 5%;
-    height: 10dvh;
+    height: 10ddvh;
   }
 
   .cart .content__title {
@@ -50,22 +50,22 @@
   }
 
   .content__items {
-    height: 55dvh;
+    height: 55ddvh;
     overflow: scroll;
     display: block;
   }
 
   .cart__item {
-    margin-top: 0.5dvh;
-    height: 10dvh;
+    margin-top: 0.5ddvh;
+    height: 10ddvh;
     padding: 0;
     background-color: rgba(204, 204, 204, 0.15);
     justify-content: space-around;
   }
 
   .cart__item-img img {
-    height: 6dvh;
-    width: 7dvh;
+    height: 6ddvh;
+    width: 7ddvh;
   }
 
   .cart__item-info h3 {
@@ -92,7 +92,7 @@
 
   .cart__bottom {
     margin: 0;
-    height: 18dvh;
+    height: 18ddvh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -111,7 +111,7 @@
   .cart__bottom-buttons {
     margin-top: 0;
     justify-content: space-around;
-    margin-bottom: 1dvh;
+    margin-bottom: 1ddvh;
   }
 
   .cart__bottom-buttons .pay-btn {

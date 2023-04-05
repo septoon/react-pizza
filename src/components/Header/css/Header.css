@@ -1,5 +1,5 @@
 .header_container {
-  height: 12vh;
+  height: 12dvh;
 }
 
 .header_wrapper {
@@ -36,24 +36,24 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav_btn span {
   font-size: 1.5em;
   font-family: 'Russo One', sans-serif;
-  color: #EB5A1E;
+  color: #eb5a1e;
 }
 
 .nav_btn:focus {
   outline: none;
-  color: #FE5F1E;;
+  color: #fe5f1e;
 }
-  
+
 .basket {
   width: 150px;
   height: 50px;
-  background-color: #FE5F1E;
+  background-color: #fe5f1e;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -74,6 +74,6 @@
 
 @media (prefers-color-scheme: dark) {
   .nav_btn span {
-    color: #F8B90C;
+    color: #f8b90c;
   }
 }

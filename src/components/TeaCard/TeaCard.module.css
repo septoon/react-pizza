@@ -13,17 +13,17 @@
   display: flex;
 }
 
-.card_items:first-child  {
+.card_items:first-child {
   display: none;
 }
 
-.card_items:nth-child(2)  {
+.card_items:nth-child(2) {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.card_items:nth-child(2)>.card_item {
+.card_items:nth-child(2) > .card_item {
   display: none;
 }
 
@@ -31,10 +31,12 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.teaCard_title, .item h3, .item span {
+.teaCard_title,
+.item h3,
+.item span {
   font-family: 'Jost', sans-serif;
 }
 
@@ -56,7 +58,8 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    .teaCard_title, h3 {
+    .teaCard_title,
+    h3 {
       color: #ccc;
     }
   }
@@ -64,7 +67,7 @@
 
 @media screen and (max-width: 414px) {
   .teaCard_wrapper {
-    margin-top: 8vh;
+    margin-top: 8dvh;
   }
 
   .card_items {

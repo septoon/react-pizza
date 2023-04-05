@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: .3s;
+  transition: 0.3s;
   margin-top: 10px;
 }
 
@@ -32,7 +32,7 @@
 .description {
   margin-bottom: 10px;
   font-family: 'Jost', sans-serif;
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: 300;
 }
 
@@ -41,8 +41,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 50px;
 }
 
@@ -59,7 +59,7 @@
   font-family: 'Jost', sans-serif;
   font-size: 1em;
   font-weight: 600;
-  border: .5px solid #ddd;
+  border: 0.5px solid #ddd;
   border-radius: 5px;
   padding: 5px 8px;
 }
@@ -67,9 +67,9 @@
 .packing_item {
   width: 100%;
   font-family: 'Jost', sans-serif;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 500;
-  border: .5px solid #ddd;
+  border: 0.5px solid #ddd;
   border-radius: 5px;
   padding: 5px 8px;
   background-color: #eee;
@@ -90,8 +90,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
@@ -105,7 +105,7 @@
 
 .btn_order {
   padding: 8px 18px;
-  background-color: #FE5F1E;
+  background-color: #fe5f1e;
   color: #fff;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
@@ -119,19 +119,19 @@
 }
 
 .btn_order:focus {
-  border: 1px solid #FE5F1E;
+  border: 1px solid #fe5f1e;
   background-color: #fff;
-  color: #FE5F1E;
+  color: #fe5f1e;
 }
 
 button {
   font-size: 13px;
   background-color: #fff;
-  border: .5px solid #ddd;
+  border: 0.5px solid #ddd;
   border-radius: 5px;
   padding: 5px 8px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 button:hover {
@@ -150,19 +150,21 @@ button:focus {
 .order_index {
   padding: 5px 10px;
   border-radius: 50%;
-  background-color: #FE5F1E;
+  background-color: #fe5f1e;
   color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
-  span, b {
+  span,
+  b {
     color: #ccc;
   }
 
-  .size_item, .packing_item {
-    background-color: #39383D;
+  .size_item,
+  .packing_item {
+    background-color: #39383d;
     /* border: none; */
-    border: .5px solid #2c2b2f;
+    border: 0.5px solid #2c2b2f;
     color: #fff;
   }
 
@@ -170,7 +172,8 @@ button:focus {
     border: none;
   }
 
-  .size_item:hover, .size_item:focus {
+  .size_item:hover,
+  .size_item:focus {
     background-color: rgb(177, 165, 165);
   }
 
@@ -195,11 +198,11 @@ button:focus {
   }
 
   .size_item {
-    font-size: .5em;
+    font-size: 0.5em;
   }
 
   .btn_order {
-    font-size: .5em;
+    font-size: 0.5em;
     padding: 7px 14px;
     border-radius: 5px;
   }
@@ -215,7 +218,7 @@ button:focus {
   .wrapper {
     width: 90%;
   }
-  
+
   .catalog_item {
     width: 100%;
     margin-top: 20px;
@@ -223,7 +226,7 @@ button:focus {
     justify-content: space-around;
     border-bottom: 2px dashed #ccc;
   }
-  
+
   .catalog_item:hover {
     cursor: pointer;
     box-shadow: none;
@@ -237,7 +240,7 @@ button:focus {
     font-size: 2em;
     margin-bottom: 10px;
   }
-  
+
   .description {
     margin-bottom: 10px;
     font-size: 1.2em;
@@ -270,7 +273,7 @@ button:focus {
 
   @media screen and (max-width: 414px) {
     .catalog_item {
-      height: 85vh;
+      height: 85ddvh;
       justify-content: space-around;
     }
 

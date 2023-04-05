@@ -1,16 +1,17 @@
 .wrapper {
   width: 60%;
-  height: 70vh;
+  height: 70dvh;
   margin: auto;
   border-radius: 10px;
   padding: 15px;
   margin-top: 30px;
   border-bottom: 1px solid gray;
-  transition: .3s;
+  transition: 0.3s;
   position: relative;
 }
 
-.title, .wrapper span {
+.title,
+.wrapper span {
   font-family: 'Jost', sans-serif;
 }
 
@@ -29,14 +30,14 @@
 .wrapper span:last-child {
   position: absolute;
   left: 4%;
-  bottom: 20vh;
+  bottom: 20dvh;
 }
 
 @media (prefers-color-scheme: dark) {
   .wrapper a {
     color: rgb(114, 158, 120);
   }
-} 
+}
 
 @media screen and (max-width: 500px) {
   .wrapper {
@@ -47,8 +48,8 @@
 @media screen and (max-width: 414px) {
   .wrapper {
     margin: 0;
-    margin-top: 8vh;
-    height: 92vh;
+    margin-top: 8dvh;
+    height: 92dvh;
     text-align: left;
     padding-top: 0;
   }

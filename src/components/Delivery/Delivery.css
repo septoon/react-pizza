@@ -1,5 +1,5 @@
 .delivery-main {
-  height: 70vh;
+  height: 70dvh;
   margin-top: 30px;
   padding-bottom: 20px;
 }
@@ -16,7 +16,8 @@
   margin-bottom: 15px;
 }
 
-.delivery_title, td {
+.delivery_title,
+td {
   font-family: 'Jost', sans-serif;
   text-align: start;
 }
@@ -26,14 +27,15 @@ td {
 }
 
 @media (prefers-color-scheme: dark) {
-  .delivery-list h1, td {
+  .delivery-list h1,
+  td {
     color: #ccc;
   }
 }
 @media screen and (max-width: 414px) {
   .delivery-main {
-    margin-top: 8vh;
-    height: 92vh;
+    margin-top: 8dvh;
+    height: 92dvh;
     padding-bottom: 0;
   }
 

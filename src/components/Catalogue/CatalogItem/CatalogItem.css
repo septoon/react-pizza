@@ -274,7 +274,7 @@ button:focus {
   @media screen and (max-width: 414px) {
     .catalog_item {
       height: 85dvh;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
     .price_holder {

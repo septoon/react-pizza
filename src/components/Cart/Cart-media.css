@@ -23,7 +23,7 @@
     margin-bottom: 2dvh;
   }
 
-  .cart_back_btn {
+  .empty {
     position: absolute;
     bottom: 10dvh;
     left: 2vw;
@@ -41,7 +41,6 @@
   }
 
   .cart__top {
-    margin-left: 5%;
     height: 10dvh;
   }
 
@@ -50,7 +49,7 @@
   }
 
   .content__items {
-    height: 55dvh;
+    height: 62dvh;
     overflow: scroll;
     display: block;
   }

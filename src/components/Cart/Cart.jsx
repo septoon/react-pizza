@@ -26,6 +26,8 @@ const Cart = () => {
     isDark: dark.isDark
   }))
 
+  const backBtnClassName = items.length ? "cart_back_btn" : "cart_back_btn empty"
+
   // Создайте новый массив уникальных элементов, используя метод reduce().
   const uniqueProducts = items.reduce((acc, current) => {
     // Проверяем, есть ли элемент с таким же id в массиве acc
@@ -101,7 +103,7 @@ const Cart = () => {
                     </div>
                     <div className="cart__bottom-buttons">
                       <NavLink to='/catalog' className="cart_bottom" onClick={ () => dispatch(toggleIsActiveAC(true))}>
-                        <button className="cart_back_btn">Вернуться назад</button>
+                        <button className={backBtnClassName}>Вернуться назад</button>
                       </NavLink>
                       <div className="button pay-btn cart_bottom">
                         <button className="btn-order" onClick={ () => setIsOrder(true) }>Заказать</button>
@@ -121,7 +123,7 @@ const Cart = () => {
                      }
                      
                      <NavLink to='/catalog' className="cart_back_btn_wrapper">
-                        <button className="cart_back_btn">Вернуться назад</button>
+                        <button className={backBtnClassName}>Вернуться назад</button>
                      </NavLink>
                 </div>
               )

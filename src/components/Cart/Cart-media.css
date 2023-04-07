@@ -84,9 +84,12 @@
   }
 
   .cart__item-count-minus,
-  .cart__item-count-plus,
-  .cart__item-remove {
+  .cart__item-count-plus {
     display: none;
+  }
+
+  .close-cart {
+    width: 24px;
   }
 
   .cart__bottom {

@@ -29,7 +29,7 @@ const Form = ({ setIsOrder, items, countById, totalItems, onClickClearCart, tota
   const sendEmail = (e) => {
     e.preventDefault()
 
-  emailjs.sendForm('gmail', 'template_34nbq1a', form.current, 'user_bZNkaUPeU8r748slZmiEH')
+  emailjs.sendForm('gmail', 'template_u0d7yw8', form.current, 'ekXJl3cQ3snFLGpWZ')
     .then((result) => {
         console.log(result.text);
     }, (error) => {
@@ -50,7 +50,7 @@ const Form = ({ setIsOrder, items, countById, totalItems, onClickClearCart, tota
           <div className="order_list_wrapper">
           {
             items.map(i => {
-              const count = countById(totalItems, i.id)
+              const count = countById(totalItems, i.id, i.activeSize)
               return (
                 <input key={i.id} className="hidden-input" name={i.id} value={`${i.title} | ${i.activeSize} | ${i.activePrice} ₽ | x ${count}шт.`} />
               )

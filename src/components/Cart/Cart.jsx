@@ -26,12 +26,13 @@ const Cart = () => {
     isDark: dark.isDark
   }))
 
+  console.log(items)
   const backBtnClassName = items.length ? "cart_back_btn" : "cart_back_btn empty"
 
   // Создайте новый массив уникальных элементов, используя метод reduce().
   const uniqueProducts = items.reduce((acc, current) => {
     // Проверяем, есть ли элемент с таким же id в массиве acc
-    const isDuplicate = acc.find((item) => item.id === current.id);
+    const isDuplicate = acc.find((item) => item.id === current.id && item.activeSize === current.activeSize);
     // Если элемент не найден, добавляем его в массив acc.
     if (!isDuplicate) {
       acc.push(current);
@@ -40,9 +41,9 @@ const Cart = () => {
     return acc;
   }, []);
 
-  const countById = (items, id) => {
+  const countById = (items, id, activeSize) => {
     return items.reduce((count, i) => {
-      if (i.id === id) {
+      if (i.id === id && i.activeSize === activeSize) {
         return count + 1;
       }
       return count;
@@ -86,9 +87,9 @@ const Cart = () => {
                   <div className="content__items">
 
                   {uniqueProducts.map((item, index) => {
-                    const result = items.filter( elem => elem.id === item.id)
+                    const result = items.filter( elem => elem.id === item.id && elem.activeSize === item.activeSize)
                     let price = 0
-                    const count = countById(items, item.id)
+                    const count = countById(items, item.id, item.activeSize)
                     
                     return ( 
                       <CartItem key={index} result={result} count={count} price={price} onClickRemovePizza={onClickRemovePizza} {...item} />

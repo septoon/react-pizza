@@ -8,8 +8,11 @@ const CartItem = ({ id, image, title, activeSize, activePrice, price, count, onC
   
   result.forEach(item => price += parseInt(item.activePrice) + 40)
   const onRemovePizza = () => {
-    const pizzaId = id
-    onClickRemovePizza(pizzaId)
+    const pizzaObj = {
+      "pizzaId": id,
+      "pizzaSize": activeSize
+    }
+    onClickRemovePizza(pizzaObj)
   }
 
   return (

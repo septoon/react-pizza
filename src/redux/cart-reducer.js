@@ -36,11 +36,16 @@ const cartReducer = (state = initialState, action) => {
       return newState
     }
     case MINUS_PIZZA: {
-      const idToRemove = action.payload;
-      const updatedItems = state.items.filter(item => item.id !== idToRemove);
+      const minusData = action.payload
+      const idToRemove = minusData.pizzaId;
+      const sizeToRemove = minusData.pizzaSize;
+      const updatedItems = state.items.filter(item => item.id !== idToRemove || item.activeSize !== sizeToRemove);
+      const newTotalPrice = updatedItems.reduce((sum, item) => sum + parseInt(item.activePrice) + 40, 0);
       return {
         ...state,
-        items: updatedItems
+        items: updatedItems,
+        totalCount: updatedItems.length,
+        totalPrice: newTotalPrice
       }
     }
     default:
@@ -50,6 +55,6 @@ const cartReducer = (state = initialState, action) => {
 
 export const addPizzaToCartAC = (pizzaObj) => ({ type: ADD_PIZZA_CART, payload: pizzaObj  })
 export const clearPizzaCartAC = () => ({ type: CLEAR_PIZZA_CART })
-export const removePizzaAC = (id) => ({ type: MINUS_PIZZA, payload: id  })
+export const removePizzaAC = (pizzaObj) => ({ type: MINUS_PIZZA, payload: pizzaObj  })
 
 export default cartReducer

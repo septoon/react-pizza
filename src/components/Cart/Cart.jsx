@@ -26,7 +26,6 @@ const Cart = () => {
     isDark: dark.isDark
   }))
 
-  console.log(items)
   const backBtnClassName = items.length ? "cart_back_btn" : "cart_back_btn empty"
 
   // Создайте новый массив уникальных элементов, используя метод reduce().
@@ -52,8 +51,8 @@ const Cart = () => {
 
   const [isOrder, setIsOrder] = React.useState(false)
 
-  const onClickRemovePizza = (pizzaId) => {
-    dispatch(removePizzaAC(pizzaId))
+  const onClickRemovePizza = (pizzaObj) => {
+    dispatch(removePizzaAC(pizzaObj))
   }
   const onClickClearCart = () => {
     dispatch(clearPizzaCartAC())

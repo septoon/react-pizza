@@ -7,6 +7,7 @@ import darkReducer from './darkTheme-reducer'
 import deliveryReducer from './delivery-reducer'
 import navReducer from './nav-reducer'
 import teaCardReducer from './teaCard-reducer'
+import appReducer from './app-reducer'
 
 const reducers = combineReducers({
     catalogPage: catalogReducer,
@@ -14,7 +15,8 @@ const reducers = combineReducers({
     deliveryPage: deliveryReducer,
     cart: cartReducer,
     nav: navReducer,
-    dark: darkReducer
+    dark: darkReducer,
+    app: appReducer
 })
 
 export const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) // applyMiddleware for thunk

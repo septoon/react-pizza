@@ -1,0 +1,79 @@
+.loader-container {
+  background-color: #ffdf8c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.loader-container .loader-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 45px;
+  width: 45px;
+  background-image: url("https://dl.dropboxusercontent.com/u/90908441/CodePen/logo_2.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  margin: -20px 0 0 -20px;
+  animation: circle 2s linear infinite;
+}
+.loader-container .loader {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader-container .circles {
+  height: 100px;
+  width: 100px;
+  border-bottom: 3px solid #fe5f1e;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+.loader-container .circles:before {
+  border-top: 3px solid #fff;
+  height: 90px;
+  width: 90px;
+  margin: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  content: "";
+  animation: spin 4s linear infinite;
+}
+.loader-container .circles:after {
+  border-left: 3px solid #fe5f1e;
+  height: 80px;
+  width: 80px;
+  margin: 15px 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  content: "";
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+ }
+  100% {
+    transform: rotate(360deg);
+ }
+}
+@keyframes circle {
+  0% {
+    transform: rotateY(0deg);
+ }
+  40% {
+    transform: rotateY(360deg);
+ }
+  100% {
+    transform: rotateY(360deg);
+ }
+}

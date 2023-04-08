@@ -10,6 +10,8 @@ import Delivery from './components/Delivery/Delivery';
 import Main from './components/Main/Main';
 import Cart from './components/Cart/Cart';
 import NavMobile from './components/NavMobile/NavMobile';
+import Loader from './components/Loader/Loader';
+import { useSelector } from 'react-redux';
 
 const App = () => {
   return (

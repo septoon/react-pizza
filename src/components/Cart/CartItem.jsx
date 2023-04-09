@@ -30,7 +30,7 @@ const CartItem = ({ id, image, title, activeSize, activePrice, price, count, onC
         <div className="button button--outline button--circle cart__item-count-minus"> 
         <img src={minus} className="svg minus" alt="minus" />
       </div>
-      <b> | {count}шт. | </b>
+      <b>{count}шт.</b>
       <div className="button button--outline button--circle cart__item-count-plus"> 
         <img src={plus} className="svg" alt="plus" />
       </div>

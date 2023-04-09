@@ -132,7 +132,7 @@ p,
 .cart__item-count {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 13%;
 }
 .cart__item-count-minus svg path:first-of-type {

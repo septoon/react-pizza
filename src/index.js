@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-pizza">
+    <BrowserRouter>
       <Provider store={store} >     
         <App />
       </Provider> 

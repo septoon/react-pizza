@@ -42,7 +42,7 @@ const CatalogItem = ({ id, image, title, composition, prices, isChange, onClickA
             } } onBlur={ () => { isChange = false}} className="size_item">Ø 50 см</button>
 
           </div>
-          <span className="packing_item">+40₽ к стоимости за упаковку</span>
+          <span className="packing_item">+40₽ к стоимости, за упаковку</span>
           <div className="price_holder">
             <span className="price pr_inp">
               <span className="price_count"> 

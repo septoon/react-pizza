@@ -226,6 +226,11 @@ p,
   color: #eb5a1e;
 }
 
+.cart__item-count-minus,
+.cart__item-count-plus {
+  display: none;
+}
+
 .back {
   width: 6px;
   height: 12px;

@@ -5,8 +5,19 @@ import './css/Main.css'
 import './css/Main-media.css'
 import { NavLink } from 'react-router-dom'
 import Img from './Img'
+import { useDispatch } from 'react-redux'
+import { toggleIsActiveAC } from '../../redux/nav-reducer'
 
 const Main = props => {
+  const dispatch = useDispatch()
+
+   React.useEffect(() => { 
+     dispatch(toggleIsActiveAC(false))
+   }, [dispatch])
+
+   const handleClick = (el) => {
+     dispatch(toggleIsActiveAC(true))
+   }
   return (
     <div className='container main'>
             <div className='text'>

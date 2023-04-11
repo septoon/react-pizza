@@ -21,7 +21,7 @@ const Main = props => {
   return (
     <div className='container main'>
             <div className='text'>
-              <h1>Делись любовью с помощью пиццы</h1>
+              <h1>Делись любовью с помощью пиццы!</h1>
             </div>
             <NavLink to='/catalog' >
               <button className="order" onClick={ () => handleClick() }>

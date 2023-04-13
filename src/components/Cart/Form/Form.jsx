@@ -58,7 +58,7 @@ const Form = ({ setIsOrder, items, countById, totalItems, onClickClearCart, tota
           }
           </div>
           <div className="order_inputs_wrapper">
-            <input className="hidden-input" name="message" value={`На сумму: ${totalPrice} ₽`} />
+            <input className="hidden-input" type="text" name="message" value={`На сумму: ${totalPrice} ₽`} />
             <label>Введите ваш адрес:</label>
             <div className="inp_valid">
               <input required

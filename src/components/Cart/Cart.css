@@ -272,6 +272,7 @@ p {
   color: #fff;
   font-size: 1em;
   font-weight: bold;
+  border: none;
   border-radius: 20px;
   cursor: pointer;
 }

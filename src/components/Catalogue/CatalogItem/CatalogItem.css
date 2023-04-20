@@ -19,7 +19,8 @@
 
 .image {
   margin-bottom: 20px;
-  max-width: 75%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .name {
@@ -233,7 +234,7 @@ button:focus {
   }
 
   .image {
-    height: 200px;
+    border-radius: 0;
   }
 
   .name {

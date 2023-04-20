@@ -32,7 +32,7 @@ h1 {
   left: 0;
   bottom: 100px;
   color: #fff;
-  background: #fdbd0c;
+  background: #fe5f1e;
   border: none;
   border-radius: 25px;
 }
@@ -42,5 +42,5 @@ h1 {
 }
 
 .order:hover {
-  background: #fe5f1e;
+  background: #fdbd0c;
 }

@@ -287,6 +287,10 @@ button:focus {
     box-shadow: none;
   }
 
+  .independent {
+    flex-direction: column;
+  }
+
   .image {
     border-radius: 0;
   }

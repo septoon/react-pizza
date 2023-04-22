@@ -291,6 +291,10 @@ button:focus {
     flex-direction: column;
   }
 
+  .left .right {
+    width: 100%;
+  }
+
   .image {
     border-radius: 0;
   }

@@ -6,6 +6,8 @@ import {useSelector, useDispatch} from 'react-redux'
 import { addCatalogList, toggleIsActive } from "../../redux/catalog-reducer"
 import { addPizzaToCartAC } from "../../redux/cart-reducer"
 import catalogList from '../../common/json/catalog-list'
+import { independent } from '../../common/json/independent'
+import IndependentItem from './CatalogItem/IndependentItem'
 
 const Catalogue = props => {
   const dispatch = useDispatch()
@@ -33,6 +35,9 @@ const Catalogue = props => {
                           toggleIsActive={toggleIsActive}
                           isActive={isActive} />)
         })}
+        {
+          independent.map(i => <IndependentItem {...i} onClickAddPizza={addPizzaToCart} />)
+        }
       </div>  
     </div>
   )

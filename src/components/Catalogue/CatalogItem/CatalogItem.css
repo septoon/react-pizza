@@ -9,6 +9,53 @@
   margin-top: 10px;
 }
 
+.independent {
+  width: 48%;
+  margin-top: 10px;
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.independent > .left > .catalog_item_block > .description {
+  margin-bottom: 0;
+}
+
+.right {
+  width: 50%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.right h2 {
+  font-size: 1em;
+  text-align: left;
+}
+
+.additives {
+  height: 80%;
+  display: flex;
+  margin-top: 20%;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.additives_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog_item_block {
   width: 100%;
   display: flex;
@@ -191,6 +238,10 @@ button:focus {
   .catalog_item {
     width: 32%;
   }
+
+  .independent {
+    width: 64%;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -212,6 +263,9 @@ button:focus {
 @media screen and (max-width: 700px) {
   .catalog_item {
     width: 50%;
+  }
+  .independent {
+    width: 100%;
   }
 }
 
@@ -249,6 +303,10 @@ button:focus {
 
   .packing_item {
     margin-bottom: 10px;
+  }
+
+  .independent {
+    margin-bottom: 30px;
   }
 
   .size_item {

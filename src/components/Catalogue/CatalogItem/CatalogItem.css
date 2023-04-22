@@ -291,7 +291,7 @@ button:focus {
     flex-direction: column;
   }
 
-  .left .right {
+  .left, .right {
     width: 100%;
   }
 

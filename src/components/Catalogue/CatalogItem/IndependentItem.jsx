@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CatalogItem.css'
+import { ingredients } from '../../../common/json/ingredients'
 
-const IndependentItem = ({ prices, isChange, subtitle, additives, id, composition, title, image, onClickAddPizza }) => {
+const IndependentItem = ({ prices, isChange, subtitle, id, composition, title, image, onClickAddPizza }) => {
   const priceHolder = React.createRef()
 
-  const [activeSize, setActiveSize] = React.useState('30 см')
-  const [activePrice, setActivePrice] = React.useState(prices[0])
-
+  const [activeSize, setActiveSize] = useState('30 см')
+  const [activePrice, setActivePrice] = useState(prices[0])
+  const [additives, setAdditives] = useState({})
+  
   const onAddPizza = () => {
     const obj = {
-      id, title, image, activePrice, activeSize
+      id, title, image, activePrice, activeSize, additives
     }
     onClickAddPizza(obj)
   }
@@ -62,11 +64,19 @@ const IndependentItem = ({ prices, isChange, subtitle, additives, id, compositio
         <h2>{subtitle}</h2>
         <div className="additives">
           {
-            additives.map(i => {
+            ingredients.map(i => {
               return (
                 <div className="additives_item">
-                  <span>{i.name}</span>
-                  <span>{i.price}</span>
+                  <div className="additives_text">
+                    <span>{i.name}</span>
+                    <span>{i.price}</span>
+                  </div>
+                  <button className="additives_bth" onClick={ (e) => {
+                    setAdditives({
+                      'name': i.name,
+                      'price': i.price
+                    })
+                  }}>+</button>
                 </div>
               )
             })

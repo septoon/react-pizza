@@ -43,6 +43,7 @@ const CatalogItem = ({ id, image, title, composition, prices, isChange, onClickA
 
           </div>
           <span className="packing_item">+40₽ к стоимости, за упаковку</span>
+          <button className="ingredients">Добавить ингредиенты</button>
           <div className="price_holder">
             <span className="price pr_inp">
               <span className="price_count"> 

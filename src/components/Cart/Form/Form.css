@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .form-total > * {
@@ -66,7 +66,7 @@ input:focus::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .order_inputs_wrapper label {
@@ -99,7 +99,7 @@ input[type='text'] {
 .payment {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .payment .payment_method {
@@ -249,7 +249,7 @@ input::placeholder {
     padding: 0 2vw;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .order_list_wrapper input,
@@ -278,7 +278,7 @@ input::placeholder {
 
   .payment_method {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     height: 4dvh;
     margin-right: 5vw;
   }

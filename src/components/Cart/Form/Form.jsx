@@ -81,10 +81,10 @@ const Form = ({ setIsOrder, items, countById, totalItems, onClickClearCart, tota
             <label>Спооб оплаты:</label>
             <div className="payment" name="checkbox">
               <div className="payment_method">
-                <input  type="radio" onChange={changeValue} value="Наличные" name='cash' checked={value === 'Наличные' ? true : false}/> <label for="cash">Наличные</label>
+                <input  type="radio" onChange={changeValue} value="Наличные" name='cash' id="cash" checked={value === 'Наличные' ? true : false}/> <label className="label_pay" for="cash">Наличные</label>
               </div>
               <div className="payment_method">
-                <input  type="radio" onChange={changeValue} value="Карта" name='cart' checked={value === 'Карта' ? true : false}/> <label for="cart">Карта</label>
+                <input  type="radio" onChange={changeValue} value="Карта" name='cart' id="cart" checked={value === 'Карта' ? true : false}/> <label className="label_pay" for="cart">Карта</label>
               </div>
             </div> 
           </div>

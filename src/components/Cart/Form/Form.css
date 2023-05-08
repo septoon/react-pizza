@@ -73,13 +73,13 @@ input:focus::placeholder {
   margin-top: 10px;
 }
 
-input[type="text"] {
+input[type='text'] {
   font-family: inherit; /* 1 */
   font-size: inherit; /* 1 */
   line-height: inherit; /* 1 */
   font-weight: bold;
   color: orange;
-  margin-bottom: 10px;;
+  margin-bottom: 10px;
   margin: 0; /* 2 */
 }
 
@@ -105,6 +105,55 @@ input[type="text"] {
 .payment .payment_method {
   cursor: pointer;
   margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.label_pay {
+  position: relative;
+  padding-left: 2em;
+  padding-right: 1em;
+  line-height: 2;
+  cursor: pointer;
+}
+.label_pay:before {
+  box-sizing: border-box;
+  content: ' ';
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid orange;
+  border-radius: 0.25em;
+  z-index: -1;
+}
+input[type='radio'] + .label_pay::before {
+  border-radius: 1em;
+}
+/* Checked */
+input[type='radio']:checked + .label_pay {
+  padding-left: 1em;
+  color: white;
+}
+input[type='radio']:checked + .label_pay:before {
+  top: 0;
+  width: 100%;
+  height: 2em;
+  background: orange;
+}
+/* Transition */
+.label_pay,
+.label_pay::before {
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
 .inp_valid {
@@ -120,7 +169,15 @@ input[type="text"] {
 }
 
 input::placeholder {
-  color: rgba(0, 0, 0, .4);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form-total button {
+  background-color: #fe5f1e;
+}
+
+.form-total button:hover {
+  background-color: #feac1e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -132,6 +189,17 @@ input::placeholder {
   input,
   label {
     color: #ccc;
+  }
+
+  .label_pay:before {
+    border: 2px solid white;
+  }
+
+  input[type='radio']:checked + .label_pay {
+    color: orange;
+  }
+  input[type='radio']:checked + .label_pay:before {
+    background: white;
   }
 }
 
@@ -201,11 +269,10 @@ input::placeholder {
     color: #fff;
     font-weight: bold;
     border-radius: 8px;
-    /* margin-top: 2dvh; */
-    margin-left: 2vw;;
+    margin-left: 2vw;
   }
 
-  .payment .payment_method{
+  .payment .payment_method {
     margin-right: 0;
   }
 
@@ -218,5 +285,10 @@ input::placeholder {
 
   .payment_method input {
     margin: 0.4rem;
+  }
+
+  .label_pay {
+    margin-right: 1em;
+    margin-bottom: 1em;
   }
 }

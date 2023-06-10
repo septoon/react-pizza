@@ -34,7 +34,7 @@
     font-weight: bold;
     border-radius: 10px;
   }
-  /* Если в корзине что-то есть */
+
   .cart {
     margin-top: 8dvh;
     height: 90dvh;

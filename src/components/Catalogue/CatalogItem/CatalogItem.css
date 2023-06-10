@@ -31,9 +31,6 @@
 
 .right {
   width: 50%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 .right h2 {
@@ -249,7 +246,6 @@ button:focus {
   .size_item,
   .packing_item {
     background-color: #39383d;
-    /* border: none; */
     border: 0.5px solid #2c2b2f;
     color: #fff;
   }
@@ -346,10 +342,6 @@ button:focus {
     margin-bottom: 10px;
     font-size: 1.2em;
   }
-
-  /* .packing_item {
-    margin-bottom: 10px;
-  } */
 
   .independent {
     margin-bottom: 30px;
